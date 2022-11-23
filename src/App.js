@@ -1,11 +1,19 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+// import { Counter } from './features/counter/Counter';
 import './App.css';
+import Logo from '../src/header/components/Logo';
+import Introduction from '../src/main/components/Introduction';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <Logo />
+      </header>
+      <main>
+        <Introduction />
+      </main>
+      {/* <header className="App-header">
         <Counter />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -48,7 +56,7 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
     </div>
   );
 }
