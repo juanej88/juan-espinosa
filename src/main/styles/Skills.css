@@ -1,17 +1,18 @@
 #skills {
   width: 100%;
-  /* height: calc(100vh * 0.80); */
+  min-height: calc(100vh * 0.5);
   background: linear-gradient(hsl(140, 85%, 70%), 67%, hsl(140, 85%, 90%));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin-top: 1rem;
 }
 
 #skills h2 {
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 3rem 0 2rem;
 }
 
 .skills-container {

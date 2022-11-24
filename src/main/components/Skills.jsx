@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <section id='skills'>
       <article className='skills-header'>
-        <h2>My Core Skills</h2>
+        <h2>Core Skills</h2>
         <aside className='skills-container'>
           {skillElements()}
         </aside>

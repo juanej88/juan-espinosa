@@ -4,6 +4,7 @@ import './App.css';
 import Logo from '../src/header/components/Logo';
 import Introduction from '../src/main/components/Introduction';
 import Skills from '../src/main/components/Skills';
+import Projects from '../src/main/components/Projects';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Introduction />
         <Skills />
+        <Projects />
       </main>
       {/* <header className="App-header">
         <Counter />

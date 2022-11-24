@@ -4,9 +4,9 @@ const icons = {
   JavaScript: <i className='fa-brands fa-square-js'></i>,
   React: <i className='fa-brands fa-react'></i>,
   'Node.js': <i className='fa-brands fa-node'></i>,
-  Git: <i className='fa-brands fa-git-alt'></i>,
-  GitHub: <i className='fa-brands fa-github'></i>,
   PostgreSQL: <i className='fa-solid fa-database'></i>
+  // Git: <i className='fa-brands fa-git-alt'></i>,
+  // GitHub: <i className='fa-brands fa-github'></i>
 }
 
 export default icons;

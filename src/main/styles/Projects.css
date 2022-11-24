@@ -1,0 +1,65 @@
+#projects {
+  width: 100%;
+  /* min-height: calc(100vh * 0.8); */
+  background: linear-gradient(hsl(0, 85%, 70%), 67%, hsl(0, 85%, 85%));
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  padding: 3rem 0 2rem;
+}
+
+.projects-windows {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-element {
+  border-radius: 1rem;
+  background-color: hsla(0, 0%, 100%, 50%);
+  margin: 0 1rem 3rem;
+}
+
+#projects img {
+  max-width: 32.5rem;
+  height: auto;
+  margin: 0.75rem 0.75rem 0;
+  border-top: 10px solid white;
+}
+
+@media only screen and (max-width: 1400px) {
+  #projects img {
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #projects img {
+    max-width: 27.5rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #projects img {
+    max-width: 25rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #projects img {
+    max-width: 22.5rem;
+  }
+}
+
+#projects h3 {
+  padding-bottom: 0.5rem;
+}
