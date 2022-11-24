@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Logo from '../src/header/components/Logo';
 import Introduction from '../src/main/components/Introduction';
+import Skills from '../src/main/components/Skills';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </header>
       <main>
         <Introduction />
+        <Skills />
       </main>
       {/* <header className="App-header">
         <Counter />

@@ -1,0 +1,44 @@
+#skills {
+  width: 100%;
+  /* height: calc(100vh * 0.80); */
+  background: linear-gradient(hsl(140, 85%, 70%), 67%, hsl(140, 85%, 90%));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#skills h2 {
+  padding: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-container {
+  width: 8rem;
+  height: 8rem;
+  background-color: hsla(0, 0%, 100%, 50%);
+  border-radius: 1rem;
+  margin: 0 0.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+.open-more-skills {
+  background-color: hsl(140, 85%, 95%);
+  align-self: center;
+}

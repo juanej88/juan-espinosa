@@ -12,19 +12,9 @@ html,
 body {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
-  background-color: hsl(200, 85%, 75%);
+  background-color: hsl(200, 0%, 95%);
 }
 
-@media only screen and (max-width: 1050px) {
-  html,
-  body {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  html,
-  body {
-    font-size: 12px;
-  }
+button {
+  font-family: 'Montserrat', sans-serif;
 }
