@@ -25,7 +25,6 @@ const Skills = () => {
           {skillElements()}
         </aside>
       </article>
-      <button className='open-window open-more-skills'>Show more skills</button>
     </section>
   );
 };

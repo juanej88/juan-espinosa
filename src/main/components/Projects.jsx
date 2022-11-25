@@ -1,7 +1,4 @@
 import '../styles/Projects.css';
-import owlArray1 from '../../images/projects/owl-array-1.png';
-import speedyAutoCentre1 from '../../images/projects/speedy-auto-centre-1.png';
-import fourInALine1 from '../../images/projects/four-in-a-line-1.png';
 
 const Projects = () => {
   return (
@@ -10,18 +7,27 @@ const Projects = () => {
         <h2>Projects</h2>
       </article>
       <article className='projects-windows'>
-        <aside className='project-element'>
-          <img src={owlArray1} alt='Project Owl Array screenshot 1' />
+        <span className='project-element owl-array'></span>
+        <div>
           <h3>Owl Array</h3>
-        </aside>
-        <aside className='project-element'>
-          <img src={speedyAutoCentre1} alt='Project Speedy Auto Centre screenshot 1' />
+          <p>This application was created to practice built-in array methods in JavaScript</p>
+          <br />
+          <p>Technologies: <strong>HTML, CSS, JavaScript, React</strong></p>
+        </div>
+        <span className='project-element speedy-auto-centre'></span>
+        <div>
           <h3>Speedy Auto Centre</h3>
-        </aside>
-        <aside className='project-element'>
-          <img src={fourInALine1} alt='Project Speedy Auto Centre screenshot 1' />
+          <p>This application was created to practice built-in array methods in JavaScript</p>
+          <br />
+          <p>Technologies: <strong>HTML, CSS, PHP</strong></p>
+        </div>
+        <span className='project-element four-in-a-line'></span>
+        <div>
           <h3>Four in a Line</h3>
-        </aside>
+          <p>This application was created to practice built-in array methods in JavaScript</p>
+          <br />
+          <p>Technologies: <strong>HTML, CSS, JavaScript</strong></p>
+        </div>
       </article>
     </section>
   );

@@ -1,10 +1,12 @@
 import React from 'react';
+// import { createStore } from 'redux';
 // import { Counter } from './features/counter/Counter';
 import './App.css';
 import Logo from '../src/header/components/Logo';
 import Introduction from '../src/main/components/Introduction';
 import Skills from '../src/main/components/Skills';
 import Projects from '../src/main/components/Projects';
+import Contact from '../src/main/components/Contact';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Introduction />
         <Skills />
         <Projects />
+        <Contact />
       </main>
       {/* <header className="App-header">
         <Counter />
