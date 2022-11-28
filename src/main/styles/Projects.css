@@ -17,16 +17,16 @@
 .projects-windows {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 3rem;
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
   .projects-windows {
     grid-template-columns: 100%;
     padding: 0 1.5rem;
-    gap: 1.5rem;
   }
 }
 
@@ -34,9 +34,8 @@
   width: 100%;
   padding-top: 56.25%;
   background-size: cover;
-  grid-column: 1 / 2;
   color: hsl(0, 0%, 100%);
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .owl-array {
@@ -62,6 +61,7 @@
   padding: 0.2rem 0 0.5rem;
 }
 
+#projects h3,
 #projects p,
 #projects strong {
   text-align: justify;

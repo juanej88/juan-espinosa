@@ -11,10 +11,15 @@
 html,
 body {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: hsl(200, 0%, 95%);
+  scroll-behavior: smooth;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
 }
