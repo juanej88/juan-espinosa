@@ -1,0 +1,85 @@
+.lightAndDarkMode {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  grid-column: 5;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sun {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  box-shadow: inset 0px -16px 0px 0px hsla(205, 10%, 10%, 1);
+  border-radius: 50%;
+  bottom: 6px;
+  z-index: -10;
+  animation: sun .2s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sun {
+  0% {box-shadow: inset 0px -5px 0px 0px hsla(0, 0%, 100%, 1); transform: rotate(60deg) scale(1.1);}
+  50% {box-shadow: inset 0px -5px 0px 0px hsla(0, 0%, 60%, 1); transform: rotate(0deg) scale(1);}
+  100% {box-shadow: inset 0px -16px 0px 0px hsla(205, 10%, 10%, 1); transform: rotate(0deg) scale(1);}
+}
+
+.moon {
+  animation: moon .2s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moon {
+  0% {box-shadow: inset 0px -16px 0px 0px hsla(205, 10%, 10%, 1); transform: rotate(0deg) scale(1);}
+  50% {box-shadow: inset 0px -5px 0px 0px hsla(0, 0%, 60%, 1); transform: rotate(0deg) scale(1);}
+  100% {box-shadow: inset 0px -5px 0px 0px hsla(0, 0%, 100%, 1); transform: rotate(60deg) scale(1.1);}
+}
+
+.sunBeams {
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background: linear-gradient(90deg, hsla(205, 10%, 10%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(205, 10%, 10%, 1) 3px);
+  border-radius: 45%;
+  z-index: -20;
+  transform-origin: center;
+  animation: sunBeams .2s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sunBeams {
+  0% {opacity: 0; background: linear-gradient(90deg, hsla(0, 0%, 60%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 60%, 1) 3px);}
+  50% {opacity: 0; background: linear-gradient(90deg, hsla(0, 0%, 60%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 60%, 1) 3px);}
+  100% {opacity: 1; background: linear-gradient(90deg, hsla(205, 10%, 10%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(205, 10%, 10%, 1) 3px);}
+}
+
+.transparentSunBeams {
+  animation: transparentSunBeams .2s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transparentSunBeams {
+  0% {opacity: 1; background: linear-gradient(90deg, hsla(205, 10%, 10%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(205, 10%, 10%, 1) 3px);}
+  50% {opacity: 0; background: linear-gradient(90deg, hsla(0, 0%, 60%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 60%, 1) 3px);}
+  100% {opacity: 0; background: linear-gradient(90deg, hsla(0, 0%, 60%, 1) 3px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 100%, 0) 23px, hsla(0, 0%, 100%, 0) 0px, hsla(0, 0%, 60%, 1) 3px);}
+}
+
+.sunBeam1 {
+  transform: rotate(22.5deg);
+}
+
+.sunBeam2 {
+  transform: rotate(67.5deg);
+}
+
+.sunBeam3 {
+  transform: rotate(112.5deg);
+}
+
+.sunBeam4 {
+  transform: rotate(157.5deg);
+}

@@ -3,16 +3,20 @@ import React from 'react';
 // import { Counter } from './features/counter/Counter';
 import './App.css';
 import Logo from '../src/header/components/Logo';
+import LightDarkIcon from '../src/header/components/LightDarkIcon';
 import Home from './main/components/Home';
 import Skills from '../src/main/components/Skills';
 import Projects from '../src/main/components/Projects';
 import Contact from '../src/main/components/Contact';
+
+// console.log(createStore);
 
 function App() {
   return (
     <div className="App">
       <header>
         <Logo />
+        <LightDarkIcon />
       </header>
       <main>
         <Home />
