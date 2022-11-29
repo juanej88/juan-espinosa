@@ -45,20 +45,3 @@
     font-size: 1.85rem;
   }
 }
-
-#home a {
-  grid-row: 3 / 4;
-  width: fit-content;
-  margin: 0 auto;
-  cursor: pointer;
-  color: black;
-  padding: 0.25rem 0.5rem;  
-}
-
-#home a.dark-mode {
-  color: white;
-}
-
-#home i {
-  font-size: 1.25rem;
-}

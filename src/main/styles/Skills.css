@@ -1,17 +1,24 @@
 #skills {
-  width: 50%;
-  background: linear-gradient(hsl(200, 25%, 10%), 67%, hsl(200, 25%, 20%));
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(hsl(160, 85%, 75%), 50%, hsl(200, 85%, 75%));
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
   justify-content: space-between;
-  align-items: center;
   text-align: center;
   margin-top: 1rem;
 }
 
+@media only screen and (max-width: 800px) {
+  #skills {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1rem;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
 #skills h2 {
-  color: white;
-  font-size: 2rem;
   padding: 3rem 0 2rem;
 }
 
@@ -39,8 +46,25 @@ i {
   padding: 0.5rem;
 }
 
-.open-more-skills {
-  color: black;
-  background-color: hsl(200, 25%, 85%);
-  align-self: center;
+i.fa-terminal {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+.icon-img {
+  width: 3.5rem;
+  filter: brightness(0);
+  padding: 0.5rem;
+}
+
+.skills-division {
+  height: 100%;
+  background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .skills-division {
+    width: 100%;
+    background-color: white;
+  }
 }
