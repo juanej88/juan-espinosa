@@ -25,7 +25,7 @@ const Skills = () => {
           {skillElements(coreSkills)}
         </aside>
       </article>
-      <div className='skills-division'></div>
+      {/* <div className='skills-division'></div> */}
       <article className='skills-elements'>
         <h2>Other Skills</h2>
         <aside className='skills-container'>

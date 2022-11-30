@@ -1,17 +1,18 @@
 #skills {
-  width: 100%;
-  background: linear-gradient(hsl(160, 85%, 75%), 50%, hsl(200, 85%, 75%));
+  /* width: 100%; */
+  /* background: linear-gradient(hsl(160, 85%, 75%), 50%, hsl(200, 85%, 75%)); */
+  /* background-color: hsl(40, 75%, 80%); */
   display: grid;
-  grid-template-columns: 1fr 2px 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   text-align: center;
-  margin-top: 1rem;
+  margin: 0.5rem 1rem 0;
 }
 
 @media only screen and (max-width: 800px) {
   #skills {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2px;
+    grid-template-rows: 1fr;
     justify-content: space-between;
     text-align: center;
     margin-top: 1rem;
@@ -20,10 +21,18 @@
 
 .skills-elements {
   padding-bottom: 2rem;
+  background-color: hsl(0deg, 85%, 70%);
+  border-radius: 1rem;
+  margin: 0 1rem;
 }
 
 #skills h2 {
   padding: 3rem 0 2rem;
+}
+
+#skills p {
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 .skills-container {
@@ -37,7 +46,9 @@
   width: 8rem;
   height: 8rem;
   background-color: hsla(0, 0%, 100%, 90%);
-  border-radius: 1rem;
+  box-shadow: inset -4px 4px 0px 0px grey;
+  border: 2px solid;
+  border-radius: 50%;
   margin: 0 0.75rem 1.5rem;
   display: flex;
   flex-direction: column;

@@ -1,11 +1,15 @@
 #home {
   height: 85vh;
-  background: linear-gradient(135deg, hsla(200, 85%, 65%, 100%), hsla(200, 85%, 85%, 0%) 100%),
-              linear-gradient(315deg, hsla(160, 85%, 65%, 100%), hsla(160, 85%, 85%, 0%) 100%);
+  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), hsla(0, 85%, 85%, 0%) 120%),
+              linear-gradient(210deg, hsla(40, 85%, 65%, 100%), hsla(40, 85%, 85%, 0%) 120%);
+  background-color: hsl(10deg 85% 70%);
   display: grid;
   grid-template-rows: 10% 1fr 10%;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: 0 2rem 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
 #home.dark-mode {
@@ -15,6 +19,7 @@
 @media only screen and (max-width: 800px) {
   #home {
     height: 75vh;
+    margin: 0 0.5rem 0;
   }
 }
 
@@ -34,8 +39,9 @@
 }
 
 #home h1.dark-mode {
-  background: linear-gradient(90deg, hsla(200, 85%, 65%, 100%), hsla(200, 85%, 85%, 0%) 100%),
-              linear-gradient(270deg, hsla(160, 85%, 65%, 100%), hsla(160, 85%, 85%, 0%) 100%);
+  background: linear-gradient(90deg, hsla(0, 85%, 65%, 100%), hsla(0, 85%, 85%, 0%) 120%),
+  linear-gradient(270deg, hsla(40, 85%, 65%, 100%), hsla(40, 85%, 85%, 0%) 120%);
+  background-color: hsl(10deg 85% 70%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

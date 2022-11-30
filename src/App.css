@@ -1,5 +1,6 @@
 .App {
-  background-color: white;
+  /* background-color: white; */
+  background-color: hsl(40, 75%, 97%);
   min-width: 100vw;
   min-height: 100vh;
 }
