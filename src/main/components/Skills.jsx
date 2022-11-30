@@ -19,14 +19,14 @@ const Skills = () => {
 
   return (
     <section id='skills'>
-      <article className='skills-header'>
+      <article className='skills-elements'>
         <h2>Core Skills</h2>
         <aside className='skills-container'>
           {skillElements(coreSkills)}
         </aside>
       </article>
       <div className='skills-division'></div>
-      <article className='skills-header'>
+      <article className='skills-elements'>
         <h2>Other Skills</h2>
         <aside className='skills-container'>
           {skillElements(otherSkills)}

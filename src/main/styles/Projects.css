@@ -1,12 +1,13 @@
 #projects {
   width: 100%;
-  background: linear-gradient(90deg, hsl(260, 85%, 75%), 33%, hsl(260, 85%, 85%));
+  background: linear-gradient(hsl(200, 50%, 15%), 67%, hsl(200, 50%, 25%));
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   text-align: center;
   margin-top: 1rem;
+  color: white;
 }
 
 #projects h2 {
@@ -15,18 +16,20 @@
 }
 
 .projects-windows {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0 3rem;
-  column-gap: 3rem;
-  row-gap: 1rem;
+  width: 60%;
+  background-color: hsl(200, 0%, 100%, 95%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0;
+  margin-bottom: 3rem;
+  color: black;
 }
 
 @media only screen and (max-width: 800px) {
   .projects-windows {
-    grid-template-columns: 100%;
-    padding: 0 1.5rem;
+    width: 95%;
+    padding: 0.75rem 0.75rem 0;
   }
 }
 
@@ -50,19 +53,25 @@
   background-image: url('../../images/projects/four-in-a-line-1.png');
 }
 
-#projects img {
-  max-width: 32.5rem;
-  height: auto;
-  margin: 0.5rem 0.5rem 0.25rem 0.5rem;
+.project-description {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 #projects h3 {
   font-size: 1.5rem;
-  padding: 0.2rem 0 0.5rem;
+  padding: 0.5rem;
 }
 
-#projects h3,
+@media only screen and (max-width: 800px) {
+  #projects h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* #projects h3,
 #projects p,
 #projects strong {
   text-align: justify;
-}
+} */

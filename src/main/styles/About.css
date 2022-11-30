@@ -23,3 +23,18 @@
     padding: 1rem;
   }
 }
+
+.about-container > :nth-child(3) {
+  padding-top: 1rem;
+}
+
+.about-button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: hsl(200, 0%, 0%, 80%);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0.5rem 0;
+  cursor: pointer;
+  color: white;
+}
