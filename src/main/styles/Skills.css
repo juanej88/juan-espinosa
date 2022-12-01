@@ -3,10 +3,10 @@
   /* background: linear-gradient(hsl(160, 85%, 75%), 50%, hsl(200, 85%, 75%)); */
   /* background-color: hsl(40, 75%, 80%); */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 100vw 2px 100%;
   justify-content: space-between;
   text-align: center;
-  margin: 0.5rem 1rem 0;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 800px) {
@@ -20,14 +20,30 @@
 }
 
 .skills-elements {
+  display: flex;
+  justify-content: center;
   padding-bottom: 2rem;
-  background-color: hsl(0deg, 85%, 70%);
+  /* background-color: hsl(0deg, 85%, 70%); */
   border-radius: 1rem;
   margin: 0 1rem;
 }
 
+@media only screen and (max-width: 800px) {
+  .skills-elements {
+    margin: 0 0.5rem;
+  }
+}
+
+.core-skills {
+  grid-row: 2;
+}
+
+.other-skills {
+  display: none;
+}
+
 #skills h2 {
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2rem;
 }
 
 #skills p {
@@ -36,6 +52,7 @@
 }
 
 .skills-container {
+  max-width: 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,4 +100,10 @@ i.fa-terminal {
     width: 80%;
     justify-self: center;
   }
+}
+
+.skills-button {
+  grid-row: 3;
+  width: fit-content;
+  margin: 0 auto;
 }

@@ -19,19 +19,21 @@ const Skills = () => {
 
   return (
     <section id='skills'>
-      <article className='skills-elements'>
-        <h2>Core Skills</h2>
+      <h2>Skills</h2>
+      <article className='skills-elements core-skills'>
         <aside className='skills-container'>
           {skillElements(coreSkills)}
         </aside>
       </article>
-      {/* <div className='skills-division'></div> */}
-      <article className='skills-elements'>
+      <div className='skills-division'></div>
+      <article className='skills-elements other-skills'>
         <h2>Other Skills</h2>
         <aside className='skills-container'>
           {skillElements(otherSkills)}
         </aside>
       </article>
+      <button className='about-button skills-button'>Show more &gt;</button>
+
     </section>
   );
 };

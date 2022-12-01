@@ -1,28 +1,28 @@
 #projects {
   width: 100%;
-  /* background: linear-gradient(hsl(200, 50%, 15%), 67%, hsl(200, 50%, 25%)); */
+  background-color: hsl(0deg, 0%, 10%);
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
 }
 
 #projects h2 {
   font-size: 2rem;
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2rem;
+  color: white;
 }
 
 .projects-windows {
   width: 60%;
-  background-color: hsl(0, 0%, 5%, 95%);
+  background-color: hsl(40, 75%, 97%);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 0;
   margin-bottom: 3rem;
-  color: white;
 }
 
 @media only screen and (max-width: 800px) {
@@ -36,8 +36,7 @@
   width: 100%;
   padding-top: 56.25%;
   background-size: cover;
-  color: hsl(0, 0%, 100%);
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .owl-array {
@@ -53,14 +52,27 @@
 }
 
 .project-description {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;  
+  align-items: center;
+}
+
+.project-icons {
+  text-align: right;
+}
+
+.github-icon > i,
+.chrome-icon > i {
+  font-size: 1.65rem;
+  cursor: pointer;
+  color: black;
 }
 
 #projects h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   padding: 0.5rem;
+  text-align: left;
 }
 
 @media only screen and (max-width: 800px) {
