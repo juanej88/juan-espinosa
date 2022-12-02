@@ -11,8 +11,8 @@ const About = () => {
       </article> 
       <article className='about-container'>
         <h3>Coding Journey</h3>
-        <p>In 2019, I started to code by building my favourite board game "Connect Four" and since that moment, I considered the possibility to become a full-stack developer.</p>
-        <p>In 2020, I did a website for a local business in Sydney. Two years later, I decided to change careers and I started to build up this portfolio and worked on more projects to get the necessary skills to become a full-stack web developer.</p>
+        <p>In 2019, I started to code by building my favourite board game "Connect Four" and since that moment, I got passionate about the process of developing web applications.</p>
+        <p>In 2020, I did a website for a local business in Sydney, and two years later, I decided to change careers. Since then, I've been focused on building strong skills to get into the web development world, while building awesome applications.</p>
       </article>
 
       <button className='about-button'>Show more &gt;</button>
