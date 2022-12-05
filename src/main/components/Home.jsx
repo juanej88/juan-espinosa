@@ -1,8 +1,11 @@
 import '../styles/Home.css';
 
-const Home = () => {
+const Home = props => {
   return (
-    <section id='home'>
+    <section 
+      id='home' 
+      className={props.darkMode ? 'dark-mode' : null}
+    >
       <article className='home-header'>
         <h1>Hello, I'm Juan Espinosa</h1>        
       </article>

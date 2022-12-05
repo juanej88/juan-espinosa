@@ -38,7 +38,7 @@
   padding: 3rem 0;
 }
 
-#home h1.dark-mode {
+#home.dark-mode h1 {
   background: linear-gradient(90deg, hsla(0, 85%, 65%, 100%), hsla(0, 85%, 85%, 0%) 120%),
   linear-gradient(270deg, hsla(40, 85%, 65%, 100%), hsla(40, 85%, 85%, 0%) 120%);
   background-color: hsl(10deg 85% 70%);

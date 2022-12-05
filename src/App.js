@@ -1,6 +1,14 @@
 import React from 'react';
+// import store from '../src/redux';
+
+
+// import redux from 'redux';
 // import { createStore } from 'redux';
 // import { Counter } from './features/counter/Counter';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleDarkMode } from '../src/redux/darkMode';
+
 import './App.css';
 import Logo from '../src/header/components/Logo';
 import LightDarkIcon from '../src/header/components/LightDarkIcon';
@@ -12,15 +20,24 @@ import Contact from '../src/main/components/Contact';
 
 // console.log(createStore);
 
-function App() {
+function App(props) {
+
+  const darkMode = useSelector(state => state.darkMode);
+  const dispatch = useDispatch();
+  // dispatch(toggleDarkMode());
+
+  const changeDarkMode = () => {
+    dispatch(toggleDarkMode());
+  }
+
   return (
     <div className="App">
       <header>
         <Logo />
-        <LightDarkIcon />
+        <LightDarkIcon changeDarkMode={changeDarkMode} />
       </header>
       <main>
-        <Home />
+        <Home darkMode={darkMode} />
         <About />
         <Skills />
         <Projects />

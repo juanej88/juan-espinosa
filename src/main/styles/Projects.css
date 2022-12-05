@@ -52,6 +52,7 @@
 #projects img {
   width: 100%;
   scroll-snap-align: center;
+  scroll-snap-stop: always;
   margin: 0 0.5rem;
 }
 
