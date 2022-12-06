@@ -1,8 +1,31 @@
 .App {
-  /* background-color: white; */
-  background-color: hsl(40, 75%, 97%);
   min-width: 100vw;
   min-height: 100vh;
+  animation: 0.2s linear forwards appLightMode;
+}
+
+@keyframes appLightMode {
+  from {
+    background-color: hsl(200, 0%, 10%);
+  }
+  to {
+    background-color: hsl(40, 75%, 97%);
+  }
+}
+
+.App.dark-mode {
+  animation: 0.2s linear forwards appDarkMode;
+}
+
+@keyframes appDarkMode {
+  from {
+    background-color: hsl(40, 75%, 97%);
+    color: black;
+  }
+  to {
+    background-color: hsl(200, 0%, 10%);
+    color: white;
+  }
 }
 
 header {

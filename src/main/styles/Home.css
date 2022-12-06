@@ -1,30 +1,53 @@
 #home {
   height: 85vh;
-  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), hsla(0, 85%, 85%, 0%) 120%),
-              linear-gradient(210deg, hsla(40, 85%, 65%, 100%), hsla(40, 85%, 85%, 0%) 120%);
-  background-color: hsl(10deg, 85%, 70%);
   display: grid;
   grid-template-rows: 10% 1fr 10%;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* margin: 0 2rem 0; */
-  /* border-radius: 0 0 1rem 1rem; */
 }
 
-#home.dark-mode {
-  background: linear-gradient(hsl(200, 25%, 5%), 67%, hsl(200, 25%, 10%));
+#home > .home-background {
+  animation: 0.2s linear forwards homeLightMode;
+}
+
+@keyframes homeLightMode {
+  from {
+    filter: opacity(0%) brightness(0%);
+  }
+  to {
+    filter: opacity(100%) brightness(100%);
+  }
+}
+
+#home.dark-mode > .home-background {
+  animation: 0.2s linear forwards homeDarkMode;
+}
+
+@keyframes homeDarkMode {
+  from {
+    filter: opacity(100%) brightness(100%);
+  }
+  to {
+    filter: opacity(0%) brightness(0%);
+  }
+}
+
+.home-background {
+  grid-area: 1 / 1 / 4 / 2;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), 75%, hsla(40, 85%, 65%, 100%));
 }
 
 @media only screen and (max-width: 800px) {
   #home {
     height: 75vh;
-    /* margin: 0 0.5rem 0; */
   }
 }
 
 .home-header {
-  grid-row: 2 / 3;
+  grid-area: 2 / 1 / 3 / 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,18 +59,38 @@
 #home h1 {
   font-size: 2.75rem;
   padding: 3rem 0;
-}
-
-#home.dark-mode h1 {
-  background: linear-gradient(90deg, hsla(0, 85%, 65%, 100%), hsla(0, 85%, 85%, 0%) 120%),
-  linear-gradient(270deg, hsla(40, 85%, 65%, 100%), hsla(40, 85%, 85%, 0%) 120%);
+  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), 75%, hsla(40, 85%, 65%, 100%));
   background-color: hsl(10deg 85% 70%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: 0.2s linear forwards h1LightMode;
+}
+
+@keyframes h1LightMode {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(0%);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   #home h1 {
     font-size: 1.85rem;
+  }
+}
+
+#home.dark-mode h1 {
+  filter: brightness(0%);
+  animation: 0.2s linear forwards h1DarkMode;
+}
+
+@keyframes h1DarkMode {
+  from {
+    filter: brightness(0%);
+  }
+  to {
+    filter: brightness(100%);
   }
 }

@@ -1,9 +1,14 @@
 import '../styles/Logo.css';
-import logo from '../../images/logo/logoLightMode.png';
+import logoLightMode from '../../images/logo/logoLightMode.png';
+import logoDarkMode from '../../images/logo/logoDarkMode.png';
 
-const Logo = () => {
+const Logo = props => {
   return (
-    <img id='logo' src={logo} alt='Juan Espinosa Logo'></img>
+    <img 
+      id='logo' 
+      src={props.darkMode ? logoDarkMode : logoLightMode} 
+      alt='Juan Espinosa Logo'
+      />
   );
 };
 

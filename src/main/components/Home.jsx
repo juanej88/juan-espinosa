@@ -6,8 +6,9 @@ const Home = props => {
       id='home' 
       className={props.darkMode ? 'dark-mode' : null}
     >
+      <aside className='home-background'></aside>
       <article className='home-header'>
-        <h1>Hello, I'm Juan Espinosa</h1>        
+        <h1>Hello, I'm Juan Espinosa</h1>
       </article>
     </section>
   );

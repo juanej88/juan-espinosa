@@ -21,20 +21,21 @@ import Contact from '../src/main/components/Contact';
 // console.log(createStore);
 
 function App(props) {
-
   const darkMode = useSelector(state => state.darkMode);
   const dispatch = useDispatch();
-  // dispatch(toggleDarkMode());
 
   const changeDarkMode = () => {
     dispatch(toggleDarkMode());
   }
 
   return (
-    <div className="App">
+    <div className={darkMode ? 'App dark-mode' : 'App'}>
       <header>
-        <Logo />
-        <LightDarkIcon changeDarkMode={changeDarkMode} />
+        <Logo darkMode={darkMode} />
+        <LightDarkIcon
+          darkMode={darkMode}
+          changeDarkMode={changeDarkMode} 
+        />
       </header>
       <main>
         <Home darkMode={darkMode} />
