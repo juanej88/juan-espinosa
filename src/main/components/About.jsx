@@ -7,7 +7,7 @@ const About = () => {
       <h2>About Me</h2>
       <article className='about-container'>
         <h3>Who Am I?</h3>
-        <p>I'm a Full-Stack Web Developer with a Bachelor Degree in Architectural Engineering</p>
+        <p>I'm a Front-End Web Developer with a Bachelor Degree in Architectural Engineering</p>
       </article> 
       <article className='about-container'>
         <h3>Coding Journey</h3>

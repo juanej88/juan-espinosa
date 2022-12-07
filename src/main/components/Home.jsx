@@ -9,6 +9,7 @@ const Home = props => {
       <aside className='home-background'></aside>
       <article className='home-header'>
         <h1>Hello, I'm Juan Espinosa</h1>
+        {/* <span>and I...</span> */}
       </article>
     </section>
   );
