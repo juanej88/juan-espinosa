@@ -7,7 +7,20 @@
   text-align: center;
 }
 
-#home > .home-background {
+@media only screen and (max-width: 800px) {
+  #home {
+    height: 75vh;
+  }
+}
+
+#home > .home-background-colour {
+  grid-area: 1 / 1 / 4 / 2;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), 75%, hsla(40, 85%, 65%, 100%));
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   animation: 0.2s linear forwards homeLightMode;
 }
 
@@ -20,7 +33,7 @@
   }
 }
 
-#home.dark-mode > .home-background {
+#home.dark-mode > .home-background-colour {
   animation: 0.2s linear forwards homeDarkMode;
 }
 
@@ -33,17 +46,86 @@
   }
 }
 
-.home-background {
+.home-background-scene {
   grid-area: 1 / 1 / 4 / 2;
   width: 100vw;
   height: 100%;
-  background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), 75%, hsla(40, 85%, 65%, 100%));
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 800px) {
-  #home {
-    height: 75vh;
+  .home-background-scene {
+    font-size: 0.75rem;
   }
+}
+
+.mountain {
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-right-color: transparent;
+  border-left-style: solid;
+  border-left-color: transparent;
+  position: relative;
+  animation: 0.2s linear forwards mountainLightMode;
+}
+
+@keyframes mountainLightMode {
+  from {
+    border-bottom-color: hsla(0, 0%, 0%, 50%);
+  }
+  to {
+    border-bottom-color: hsla(0, 0%, 100%, 20%);
+  }
+}
+
+.App.dark-mode .mountain {
+  animation: 0.2s linear forwards mountainDarkMode;
+}
+
+@keyframes mountainDarkMode {
+  from {
+    border-bottom-color: hsla(0, 0%, 100%, 20%);
+  }
+  to {
+    border-bottom-color: hsla(0, 0%, 0%, 50%);
+  }
+}
+
+.mountain-one {
+  border-bottom-color: hsla(0, 0%, 100%, 20%);
+  border-bottom-width: 24em;
+  border-right-width: 21em;
+  border-left-width: 21em;
+  left: 20em;
+}
+
+.mountain-two {
+  border-bottom-color:hsla(0, 0%, 100%, 20%);
+  border-bottom-width: 32em;
+  border-right-width: 25em;
+  border-left-width: 25em;
+  z-index: 1;
+}
+
+.mountain-three {
+  border-bottom-color:hsla(0, 0%, 100%, 20%);
+  border-bottom-width: 18em;
+  border-right-width: 14em;
+  border-left-width: 14em;
+  right: 12em;
+}
+
+.mountain-four {
+  border-bottom-color: hsla(0, 0%, 100%, 20%);
+  border-bottom-width: 23em;
+  border-right-width: 20em;
+  border-left-width: 20em;
+  right: 20em;
+  z-index: 1;
 }
 
 .home-header {
@@ -54,10 +136,11 @@
   align-items: center;
   position: sticky;
   top: 4rem;
+  z-index: 10;
 }
 
 #home h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   padding: 3rem 0;
   background: linear-gradient(30deg, hsla(0, 85%, 65%, 100%), 75%, hsla(40, 85%, 65%, 100%));
   background-clip: text;
@@ -76,7 +159,7 @@
 
 @media only screen and (max-width: 1000px) {
   #home h1 {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 }
 
