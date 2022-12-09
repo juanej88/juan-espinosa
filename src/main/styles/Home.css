@@ -121,9 +121,9 @@
 
 .mountain-four {
   border-bottom-color: hsla(0, 0%, 100%, 20%);
-  border-bottom-width: 23em;
-  border-right-width: 20em;
-  border-left-width: 20em;
+  border-bottom-width: 24em;
+  border-right-width: 21em;
+  border-left-width: 21em;
   right: 20em;
   z-index: 1;
 }

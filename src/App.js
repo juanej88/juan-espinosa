@@ -11,6 +11,7 @@ import { toggleDarkMode } from '../src/redux/darkMode';
 
 import './App.css';
 import Logo from '../src/header/components/Logo';
+import Menu from '../src/header/components/Menu';
 import LightDarkIcon from '../src/header/components/LightDarkIcon';
 import Home from './main/components/Home';
 import About from './main/components/About';
@@ -32,6 +33,7 @@ function App(props) {
     <div className={darkMode ? 'App dark-mode' : 'App'}>
       <header>
         <Logo darkMode={darkMode} />
+        <Menu darkMode={darkMode} />
         <LightDarkIcon
           darkMode={darkMode}
           changeDarkMode={changeDarkMode} 

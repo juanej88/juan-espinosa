@@ -1,0 +1,14 @@
+.menu-list {
+  display: flex;
+  list-style: none;
+  
+}
+
+.menu-element {
+  padding: 0 1rem;
+}
+
+.menu-element > a {
+  color: black;
+  text-transform: capitalize;
+}
