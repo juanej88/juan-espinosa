@@ -1,14 +1,82 @@
+#menu {
+  display: flex;
+  justify-content: right;
+  padding-right: 1rem;
+  border-right: 1px solid black;
+  animation: 0.2s linear forwards menuLightMode;
+}
+
+@keyframes menuLightMode {
+  from {
+    border-right-color: white;
+    color: white;
+  }
+  to {
+    border-right-color: black;
+    color: black;
+  }
+}
+
+.App.dark-mode #menu {
+  animation: 0.2s linear forwards menuDarkMode;
+}
+
+@keyframes menuDarkMode {
+  from {
+    border-right-color: black;
+    color: black;
+  }
+  to {
+    border-right-color: white;
+    color: white;
+  }
+}
+
 .menu-list {
   display: flex;
   list-style: none;
-  
 }
 
 .menu-element {
-  padding: 0 1rem;
+  border: 1px solid transparent;
+  margin: 0 0.25rem;
+}
+
+.menu-element:hover {
+  border-color: black;
+  border-radius: 1rem;
+}
+
+.App.dark-mode .menu-element:hover {
+  border-color: white;
 }
 
 .menu-element > a {
-  color: black;
+  font-size: 1.1rem;
+  font-weight: 300;
   text-transform: capitalize;
+  padding: 0 0.75rem;
+  animation: 0.2s linear forwards anchorLightMode;
+}
+
+@keyframes anchorLightMode {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.App.dark-mode .menu-element > a {
+  animation: 0.2s linear forwards anchorDarkMode;
+}
+
+@keyframes anchorDarkMode {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
 }
