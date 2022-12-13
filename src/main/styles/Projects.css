@@ -12,7 +12,6 @@
 #projects h2 {
   font-size: 2rem;
   padding: 3.5rem 0 2rem;
-  color: black;
   border-top: 1px solid grey;
   width: 90vw;
 }
@@ -21,18 +20,45 @@
   width: 50%;
   max-width: 600px;
   background-color: hsl(30deg, 5%, 92%);
-  border: 2px solid hsl(30deg, 0%, 50%);
+  border: 2px solid hsl(30deg, 0%, 75%);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 0;
   margin-bottom: 3rem;
+  animation: 0.2s linear forwards projectWindowLightMode;
 }
 
 @media only screen and (max-width: 800px) {
   .projects-windows {
     width: 95%;
     padding: 0.75rem 0.75rem 0;
+  }
+}
+
+@keyframes projectWindowLightMode {
+  from {
+    background-color: hsl(30deg, 5%, 0%);
+    border-color: hsl(30deg, 0%, 25%);
+  }
+  to {
+    background-color: hsl(30deg, 5%, 92%);
+    border-color: hsl(30deg, 0%, 75%);
+  }
+}
+
+.App.dark-mode .projects-windows {
+  animation: 0.2s linear forwards projectWindowDarkMode;
+}
+
+@keyframes projectWindowDarkMode {
+  from {
+    background-color: hsl(30deg, 5%, 92%);
+    border-color: hsl(30deg, 0%, 75%);
+  }
+  to {
+    background-color: hsl(30deg, 5%, 0%);
+    border-color: hsl(30deg, 0%, 25%);
   }
 }
 
@@ -70,17 +96,25 @@
 }
 
 .dot {
-  height: 0.75rem;
-  width: 0.75rem;
+  height: 0.7rem;
+  width: 0.7rem;
   margin: 0 0.25rem;
   background-color: transparent;
-  border: 2px solid hsl(0deg, 0%, 25%);
+  border: 1px solid hsl(0deg, 0%, 25%);
   border-radius: 50%;
   cursor: pointer;
 }
 
+.App.dark-mode .dot {
+  border-color: hsl(0deg, 0%, 75%);
+}
+
 .dot-active {
   background-color: hsl(0deg, 0%, 25%);
+}
+
+.App.dark-mode .dot-active {
+  background-color: hsl(0deg, 0%, 75%);
 }
 
 .project-icons {

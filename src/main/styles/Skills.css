@@ -74,6 +74,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: 0.2s linear forwards skillsLightMode;
+}
+
+@keyframes skillsLightMode {
+  from {
+    background-color: hsla(0, 0%, 10%, 0%);
+    box-shadow: inset 0px 0px 0px 0px transparent;
+  }
+  to {
+    background-color: hsla(0, 0%, 100%, 90%);
+    box-shadow: inset -4px 4px 0px 0px grey;
+  }
+}
+
+.App.dark-mode .skill-container {
+  animation: 0.2s linear forwards skillsDarkMode;
+}
+
+@keyframes skillsDarkMode {
+  from {
+    background-color: hsla(0, 0%, 100%, 90%);
+    box-shadow: inset -4px 4px 0px 0px grey;
+  }
+  to {
+    background-color: hsla(0, 0%, 10%, 0%);
+    box-shadow: inset 0px 0px 0px 0px transparent;
+  }
 }
 
 i {
