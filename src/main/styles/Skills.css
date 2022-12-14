@@ -67,7 +67,7 @@
   height: 8rem;
   background-color: hsla(0, 0%, 100%, 90%);
   box-shadow: inset -4px 4px 0px 0px grey;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 50%;
   margin: 0 0.75rem 1.5rem;
   display: flex;
