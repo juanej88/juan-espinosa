@@ -1,19 +1,19 @@
 import { combineReducers, createStore } from 'redux';
 import darkModeReducer from './darkMode';
+import headingReducer from './heading';
 
 const rootReducer = combineReducers({
-  darkMode: darkModeReducer
+  darkMode: darkModeReducer,
+  heading: headingReducer
 })
 
 const store = createStore(rootReducer);
 
 store.subscribe(() => {
-  console.log(store.getState());
+  return;
 });
+// store.subscribe(() => {
+//   console.log(store.getState());
+// });
 
 export default store;
-
-
-// store.dispatch(toggleDarkMode());
-// store.dispatch(toggleDarkMode());
-// store.dispatch(toggleDarkMode());

@@ -1,6 +1,4 @@
 import React from 'react';
-// import store from '../src/redux';
-
 
 // import redux from 'redux';
 // import { createStore } from 'redux';
@@ -19,15 +17,13 @@ import Skills from '../src/main/components/Skills';
 import Projects from '../src/main/components/Projects';
 import Contact from '../src/main/components/Contact';
 
-// console.log(createStore);
-
 function App(props) {
   const darkMode = useSelector(state => state.darkMode);
   const dispatch = useDispatch();
 
   const changeDarkMode = () => {
     dispatch(toggleDarkMode());
-  }
+  };
 
   return (
     <div className={darkMode ? 'App dark-mode' : 'App'}>

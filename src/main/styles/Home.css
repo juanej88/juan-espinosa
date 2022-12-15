@@ -176,3 +176,7 @@
     filter: brightness(100%);
   }
 }
+
+#textCursor {
+  visibility: hidden;
+}
