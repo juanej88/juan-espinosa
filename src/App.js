@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // import redux from 'redux';
 // import { createStore } from 'redux';
@@ -26,9 +26,43 @@ function App() {
     dispatch(toggleDarkMode());
   };
 
+  
+
+  useEffect(() => {
+    const defineOpacity = () => {
+      let colour;
+      if(darkMode) {
+        colour = '200, 0%, 10%';
+      } else {
+        colour = '40, 75%, 97%';
+      }
+      const header = document.getElementById('header');
+      if (window.scrollY < 200) {
+        let percentage = Math.floor(window.scrollY * 90 / 200);
+        header.style.backgroundColor = `hsla(${colour}, ${percentage}%)`;
+        header.style.backdropFilter = 'blur(0px)';
+      } else {
+        header.style.backgroundColor = `hsla(${colour}, 90%)`;
+        header.style.backdropFilter = 'blur(5px)';
+      }
+      console.log(window.scrollY);
+    };
+
+    window.addEventListener('scroll', defineOpacity);
+
+    defineOpacity();
+
+    // return window.removeEventListener('scroll', defineOpacity);
+  }, [darkMode]);
+
   return (
-    <div className={darkMode ? 'App dark-mode' : 'App'}>
-      <header className={homeAnimation ?  'hidden' : 'visible'}>
+    <div 
+      className={darkMode ? 'App dark-mode' : 'App'}
+    >
+      <header
+        id='header'
+        className={homeAnimation ?  'hidden' : 'visible'}
+      >
         <Logo darkMode={darkMode} />
         <Menu darkMode={darkMode} />
         <LightDarkIcon
@@ -38,10 +72,12 @@ function App() {
       </header>
       <main>
         <Home homeAnimation={homeAnimation} />
+        {!homeAnimation && <>
         <About />
         <Skills />
         <Projects />
         <Contact />
+        </>}
       </main>
       {/* <header className="App-header">
         <Counter />
