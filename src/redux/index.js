@@ -1,11 +1,13 @@
 import { combineReducers, createStore } from 'redux';
 import darkModeReducer from './darkMode';
 import headingReducer from './heading';
+import homeAnimationReducer from './homeAnimation';
 
 const rootReducer = combineReducers({
   darkMode: darkModeReducer,
-  heading: headingReducer
-})
+  heading: headingReducer,
+  homeAnimation: homeAnimationReducer
+});
 
 const store = createStore(rootReducer);
 

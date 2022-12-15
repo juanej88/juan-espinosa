@@ -44,6 +44,24 @@ header {
   z-index: 100;
 }
 
+header.hidden {
+  visibility: hidden;
+}
+
+header.visible {
+  visibility: visible;
+  animation: 0.5s linear showHeader;
+}
+
+@keyframes showHeader {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 h2 {
   font-size: 2rem;
   text-align: center;

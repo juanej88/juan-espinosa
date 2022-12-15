@@ -17,8 +17,9 @@ import Skills from '../src/main/components/Skills';
 import Projects from '../src/main/components/Projects';
 import Contact from '../src/main/components/Contact';
 
-function App(props) {
+function App() {
   const darkMode = useSelector(state => state.darkMode);
+  const homeAnimation = useSelector(state => state.homeAnimation);
   const dispatch = useDispatch();
 
   const changeDarkMode = () => {
@@ -27,7 +28,7 @@ function App(props) {
 
   return (
     <div className={darkMode ? 'App dark-mode' : 'App'}>
-      <header>
+      <header className={homeAnimation ?  'hidden' : 'visible'}>
         <Logo darkMode={darkMode} />
         <Menu darkMode={darkMode} />
         <LightDarkIcon
@@ -36,7 +37,7 @@ function App(props) {
         />
       </header>
       <main>
-        <Home darkMode={darkMode} />
+        <Home homeAnimation={homeAnimation} />
         <About />
         <Skills />
         <Projects />

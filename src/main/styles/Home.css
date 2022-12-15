@@ -1,5 +1,5 @@
 #home {
-  height: 85vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: 10% 1fr 10%;
   align-items: center;
@@ -7,9 +7,31 @@
   text-align: center;
 }
 
+.extendHome {
+  animation: 0.5s linear forwards extendHome;
+}
+
+@keyframes extendHome {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 85vh;
+  }
+}
+
 @media only screen and (max-width: 800px) {
-  #home {
-    height: 75vh;
+  .extendHome {
+    animation: 0.5s linear forwards extendMobileHome;
+  }
+  
+  @keyframes extendMobileHome {
+    from {
+      height: 100vh;
+    }
+    to {
+      height: 75vh;
+    }
   }
 }
 
@@ -33,7 +55,7 @@
   }
 }
 
-#home.dark-mode > .home-background-colour {
+.App.dark-mode #home > .home-background-colour {
   animation: 0.2s linear forwards homeDarkMode;
 }
 
@@ -163,7 +185,7 @@
   }
 }
 
-#home.dark-mode h1 {
+.App.dark-mode #home h1 {
   filter: brightness(0%);
   animation: 0.2s linear forwards h1DarkMode;
 }

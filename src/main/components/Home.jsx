@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateHeading } from '../../redux/heading';
+import { showHomeAnimation } from '../../redux/homeAnimation';
 import { useEffect } from 'react';
 
 const Home = props => {
@@ -10,6 +11,7 @@ const Home = props => {
   useEffect(() => {
     let milliseconds = 60
     if(heading.length >= 24) {
+      dispatch(showHomeAnimation());
       return;
     } else if(heading.length === 0) {
       milliseconds = 2000;
@@ -46,7 +48,7 @@ const Home = props => {
   return (
     <section 
       id='home' 
-      className={props.darkMode ? 'dark-mode' : null}
+      className={props.homeAnimation ? null : 'extendHome'}
     >
       <aside className='home-background-colour'></aside>
       <aside className='home-background-scene'>
