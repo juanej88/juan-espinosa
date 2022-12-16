@@ -1,5 +1,5 @@
 import '../styles/Projects.css';
-// import { otherSkills } from '../../data/icons';
+import { otherSkills } from '../../data/icons';
 import owlArray1 from '../../images/projects/owl-array-1.png';
 import owlArray2 from '../../images/projects/owl-array-2.png';
 import speedy1 from '../../images/projects/speedy-auto-centre-1.png';
@@ -25,6 +25,27 @@ const Projects = () => {
       </article>
       <article className='projects-windows'>
         <div className='screenshoot-container'>
+          <div className='info'>
+            <h3>Owl Array</h3>
+            <p>This application was created to practice built-in array methods in JavaScript</p>
+            <p><strong>HTML, CSS, JavaScript, React</strong></p>
+            <div className='project-icons'>
+              <a 
+                className='chrome-icon'
+                href='https://owl-array.netlify.app'
+                target='_blank'
+                rel='noreferrer'
+                title='Go to Website'
+              ><i className='fa-solid fa-square-arrow-up-right'></i></a>
+              <a 
+                className='github-icon'
+                href='https://github.com/juanej88/owl-array'
+                target='_blank'
+                rel='noreferrer'
+                title='See the Code on GitHub'
+              >{otherSkills.GitHub}</a>
+            </div>
+          </div>
           <img src={owlArray1} alt='Speedy Auto Centre screenshot 1' />
           <img src={owlArray2} alt='Speedy Auto Centre screenshot 2' />
         </div>

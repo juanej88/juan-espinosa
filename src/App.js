@@ -26,8 +26,6 @@ function App() {
     dispatch(toggleDarkMode());
   };
 
-  
-
   useEffect(() => {
     const defineOpacity = () => {
       let colour;
@@ -45,7 +43,6 @@ function App() {
         header.style.backgroundColor = `hsla(${colour}, 90%)`;
         header.style.backdropFilter = 'blur(5px)';
       }
-      console.log(window.scrollY);
     };
 
     window.addEventListener('scroll', defineOpacity);

@@ -75,6 +75,14 @@
   display: none;
 }
 
+#projects .info {
+  flex: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects .info,
 #projects img {
   width: 100%;
   scroll-snap-align: center;
@@ -131,7 +139,7 @@
 #projects h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0.5rem 1.25rem;
   text-align: left;
 }
 
