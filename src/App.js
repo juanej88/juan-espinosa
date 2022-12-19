@@ -16,6 +16,7 @@ import About from './main/components/About';
 import Skills from '../src/main/components/Skills';
 import Projects from '../src/main/components/Projects';
 import Contact from '../src/main/components/Contact';
+import Footer from './footer/Footer';
 
 function App() {
   const darkMode = useSelector(state => state.darkMode);
@@ -76,6 +77,9 @@ function App() {
         <Contact />
         </>}
       </main>
+      {!homeAnimation &&
+      <Footer />
+      }
       {/* <header className="App-header">
         <Counter />
         <p>
