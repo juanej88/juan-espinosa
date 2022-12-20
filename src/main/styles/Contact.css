@@ -1,15 +1,21 @@
 #contact {
-  width: 100%;
-  /* background: linear-gradient(hsl(160, 85%, 75%), 50%, hsl(200, 85%, 75%)); */
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-top: 1rem;
+  margin: 0 3rem 0;
+  border-top: 1px solid hsl(0, 0%, 50%);
 }
 
-#contact h2 {
-  font-size: 2rem;
-  padding: 3rem 0 2rem;
+h2 {
+  padding: 3.5rem 0 1rem;
+}
+
+.contact-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0 0 3rem;
 }
