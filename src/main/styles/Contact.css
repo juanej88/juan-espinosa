@@ -17,5 +17,17 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding: 0 0 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contant-link {
+  color: black;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }

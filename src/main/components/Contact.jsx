@@ -5,25 +5,30 @@ const Contact = () => {
     <section id='contact'>
         <h2>Contact</h2>
       <article className='contact-container'>
-        <div>
+        <a 
+          className='contant-link'
+          href='tel:0481990856'
+        >
           <i className='fa-solid fa-square-phone'></i>
           <p>0481-990-856</p>
-        </div>
-        <div>
+        </a>
+        <a 
+          className='contant-link'
+          href='mailto:arq.jorrin@gmail.com'
+        >
           <i className='fa-solid fa-envelope'></i>
           <p>arq.jorrin@gmail.com</p>
-        </div>
-        <div>
-        <i className='fa-brands fa-linkedin'></i>
-        <p>
-          <a 
+        </a>
+        <a
+          className='contant-link'
           href='https://www.linkedin.com/in/juanespinosajorrin/'
           target='_blank'
           rel='noreferrer'
           title='Go to LinkedIn'
-          >linkedin.com/in/juanespinosajorrin/</a>
-        </p>
-        </div>
+        >
+          <i className='fa-brands fa-linkedin'></i>
+          <p>LinkedIn</p>
+        </a>
       </article>
     </section>
   );
