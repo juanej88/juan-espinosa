@@ -17,6 +17,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -27,7 +28,12 @@ h2 {
 
 .contant-link {
   color: black;
-  width: fit-content;
+  width: 14rem;
   margin: 0 auto;
   margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: hsla(0, 0%, 100%, 90%);
+  box-shadow: inset -4px 4px 0px 0px grey;
+  border: 1px solid;
+  border-radius: 1rem;
 }
