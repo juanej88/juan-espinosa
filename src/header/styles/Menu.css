@@ -6,6 +6,14 @@
   animation: 0.2s linear forwards menuLightMode;
 }
 
+@media only screen and (max-width: 800px) {
+  #menu {
+    order: 1;
+    position: absolute;
+    display: none;
+  }
+}
+
 @keyframes menuLightMode {
   from {
     border-right-color: white;

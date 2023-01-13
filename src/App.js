@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleDarkMode } from '../src/redux/darkMode';
 
 import './App.css';
+import MenuIcon from '../src/header/components/MenuIcon';
 import Logo from '../src/header/components/Logo';
 import Menu from '../src/header/components/Menu';
 import LightDarkIcon from '../src/header/components/LightDarkIcon';
@@ -61,6 +62,7 @@ function App() {
         id='header'
         className={homeAnimation ?  'hidden' : 'visible'}
       >
+        <MenuIcon />
         <Logo darkMode={darkMode} />
         <Menu darkMode={darkMode} />
         <LightDarkIcon

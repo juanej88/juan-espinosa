@@ -1,3 +1,13 @@
+.logo-container {
+  display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .logo-container {
+    justify-content: center;
+  }
+}
+
 #logo {
   height: 1.5rem;
   width: auto;
