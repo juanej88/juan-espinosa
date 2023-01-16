@@ -1,3 +1,9 @@
 #menu-icon i {
   font-size: 1.5rem;
 }
+
+@media only screen and (min-width: 800px) {
+  #menu-icon {
+    display: none;
+  }
+}
