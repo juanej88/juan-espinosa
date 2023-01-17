@@ -14,7 +14,15 @@ const Footer = () => {
   return (
     <footer id='footer'>
       <p>Copyright &#xa9; {getYear()} Juan Espinosa Jorrin</p>
-      <p>Wollongong, Australia</p>
+      <a 
+        href='https://github.com/juanej88'
+        target='_blank'
+        rel='noreferrer'
+        title='Go to my GitHub'
+      >
+        <i className='fa-brands fa-github'></i>
+      </a>
+      
     </footer>
   );
 }

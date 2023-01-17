@@ -17,3 +17,40 @@
 #footer > p {
   font-size: 0.9rem;
 }
+
+#footer > a {
+  animation: 0.2s linear forwards footerLightMode;
+}
+
+@keyframes footerLightMode {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+.App.dark-mode #footer > a {
+  animation: 0.2s linear forwards footerDarkMode;
+}
+
+@keyframes footerDarkMode {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+#footer i {
+  font-size: 1.75rem;
+  padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #footer i {
+    padding-top: 0.75rem;
+  }
+}

@@ -19,7 +19,7 @@ const Contact = () => {
             href='https://www.linkedin.com/in/juanespinosajorrin/'
             target='_blank'
             rel='noreferrer'
-            title='Go to LinkedIn'
+            title='Go to my LinkedIn'
           >
             <i className='fa-brands fa-linkedin'></i>
             <p>LinkedIn</p>
