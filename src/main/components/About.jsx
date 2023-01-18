@@ -1,7 +1,17 @@
 import '../styles/About.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleButton } from '../../redux/showMoreButton';
 
 const About = () => {
   const showMore = false;
+
+  const showMoreButton = useSelector(state => state.showMoreButton);
+  const dispatch = useDispatch();
+
+  const changeShowMore = () => {
+    dispatch(toggleButton());
+  };
+  
   return (
     <section id='about'>
       <h2>About Me</h2>
@@ -15,7 +25,13 @@ const About = () => {
         <p>In 2020, I did a website for a local business in Sydney, and two years later, I decided to change careers. Since then, I've been focused on building strong skills to get into the web development world, while building awesome applications.</p>
       </article>
 
-      <button className='about-button'>Show more &gt;</button>
+      {/* <button className='about-button'>+</button> */}
+      <button 
+        className='about-button skills-button'
+        onClick={changeShowMore}
+      >
+        {showMoreButton ? '-' : '+'}
+      </button>
 
       {showMore && <>
       <article className='about-container'>

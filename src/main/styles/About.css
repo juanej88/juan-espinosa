@@ -27,13 +27,14 @@
 }
 
 .about-button {
-  font-size: 1.05rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  font-size: 0.9rem;
   font-weight: 500;
   background-color: transparent;
   border: 1px solid black;
-  border-radius: 2rem;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0.5rem 0;
+  border-radius: 1.5rem;
+  margin-left: 0.75rem;
   cursor: pointer;
   animation: 0.2s linear forwards buttonLightMode;
 }
@@ -50,7 +51,7 @@
 }
 
 .about-button:hover {
-  background-color: hsl(0deg, 85%, 70%);
+  background-color: hsl(210deg, 85%, 65%);
 }
 
 .App.dark-mode .about-button {
@@ -73,7 +74,7 @@
 }
 
 .App.dark-mode .about-button:hover {
-  background-color: hsl(0deg, 85%, 70%);
-  border-color: hsl(0deg, 85%, 70%);
+  background-color: hsl(210deg, 85%, 65%);
+  border-color: hsl(210deg, 85%, 65%);
   color: black;
 }

@@ -9,6 +9,7 @@ const Contact = () => {
           <a 
             className='contant-link'
             href='mailto:arq.jorrin@gmail.com'
+            title='Email me'
           >
             <i className='fa-solid fa-envelope'></i>
             <p>Email</p>
@@ -28,6 +29,7 @@ const Contact = () => {
           <a 
             className='contant-link'
             href='tel:0481990856'
+            title='Call me'
           >
             <i className='fa-solid fa-square-phone'></i>
             <p>Phone</p>
