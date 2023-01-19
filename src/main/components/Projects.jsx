@@ -27,8 +27,9 @@ const Projects = () => {
         <div className='screenshoot-container'>
           <div className='info'>
             <h3>Owl Array</h3>
-            <p>This application was created to practice built-in array methods in JavaScript</p>
-            <p><strong>HTML, CSS, JavaScript, React</strong></p>
+            <p>I created this application to practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
+            <p>Technologies: <strong>HTML, CSS, JavaScript, React</strong></p>
+            <p>Year: <strong>2022</strong></p>
             <div className='project-icons'>
               <a 
                 className='chrome-icon'
@@ -42,12 +43,12 @@ const Projects = () => {
                 href='https://github.com/juanej88/owl-array'
                 target='_blank'
                 rel='noreferrer'
-                title='See the Code on GitHub'
+                title='See Code on GitHub'
               >{otherSkills.GitHub}</a>
             </div>
           </div>
-          <img src={owlArray1} alt='Speedy Auto Centre screenshot 1' />
-          <img src={owlArray2} alt='Speedy Auto Centre screenshot 2' />
+          <img src={owlArray1} alt='Owl Array screenshot 1' />
+          <img src={owlArray2} alt='Owl Array screenshot 2' />
         </div>
         <aside className='project-description'>
           {/* <h3>Owl Array</h3> */}

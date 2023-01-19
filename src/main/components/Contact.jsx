@@ -28,6 +28,17 @@ const Contact = () => {
 
           <a 
             className='contant-link'
+            href='https://www.instagram.com/juanespinosajorrin/'
+            target='_blank'
+            rel='noreferrer'
+            title='Go to my Instagram'
+          >
+            <i className='fa-brands fa-square-instagram'></i>
+            <p>Instagram</p>
+          </a>
+
+          <a 
+            className='contant-link'
             href='tel:0481990856'
             title='Call me'
           >
