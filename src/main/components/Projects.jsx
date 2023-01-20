@@ -27,19 +27,19 @@ const Projects = () => {
         <div className='screenshoot-container'>
           <div className='info'>
             <h3>Owl Array</h3>
-            <p>I created this application to practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
+            <p>I created this application to let users practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
             <p>Technologies: <strong>HTML, CSS, JavaScript, React</strong></p>
             <p>Year: <strong>2022</strong></p>
             <div className='project-icons'>
               <a 
-                className='chrome-icon'
+                className='project-anchor chrome-icon'
                 href='https://owl-array.netlify.app'
                 target='_blank'
                 rel='noreferrer'
                 title='Go to Website'
               ><i className='fa-solid fa-square-arrow-up-right'></i></a>
               <a 
-                className='github-icon'
+                className='project-anchor github-icon'
                 href='https://github.com/juanej88/owl-array'
                 target='_blank'
                 rel='noreferrer'
