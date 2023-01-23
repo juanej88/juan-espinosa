@@ -7,16 +7,47 @@ import speedy2 from '../../images/projects/speedy-auto-centre-2.png';
 import fourInALine1 from '../../images/projects/four-in-a-line-1.png';
 import fourInALine2 from '../../images/projects/four-in-a-line-2.png';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { updateIndicator } from '../../redux/indicators';
+
 const Projects = () => {
-  const dots = () => {
-    return (
-      <div className='dots'>
-        <div className='dot dot-active'></div>
-        <div className='dot'></div>
-        <div className='dot'></div>
-      </div>
-    );
+  const indicatorStatus = useSelector(state => state.indicators);
+  const dispatch = useDispatch();
+
+  const dots = (project) => {
+    const allDots = []
+    for (let i = 0; i < 3; i++) {
+      allDots.push (
+        <div 
+          className={indicatorStatus[project] === i ? 'dot dot-active' : 'dot'}
+        >
+        </div>
+        );
+    }
+    return allDots;
   };
+
+  const displayIndicator = e => {
+    const scrollWidth = e.target.scrollWidth;
+    const scrollLeft = e.target.scrollLeft;
+    const scrollSegment = Math.round(scrollWidth / 6);
+    const indicatorPosition = (
+      // 8 px are added due to the left margin of the class 'projects-windows'
+      scrollLeft < (scrollSegment + 8) ? 0 :
+      scrollLeft > (scrollSegment * 3 + 8) ? 2 :
+      1
+      );
+
+    const projectIndicator = e.target.id === 'owl-array' ? 0 : 1;
+
+    const modifyIndicator = () => {
+      dispatch(updateIndicator([projectIndicator, indicatorPosition]));
+    };
+
+    modifyIndicator();
+  };
+
+  console.log(indicatorStatus);
 
   return (
     <section id='projects'>
@@ -24,10 +55,16 @@ const Projects = () => {
         <h2>Projects</h2>
       </article>
       <article className='projects-windows'>
-        <div className='screenshoot-container'>
+        <div 
+        id='owl-array' 
+        className='screenshoot-container'
+        onScroll={displayIndicator}
+        >
+          <img src={owlArray1} alt='Owl Array screenshot 1' />
+          <img src={owlArray2} alt='Owl Array screenshot 2' />
           <div className='info'>
             <h3>Owl Array</h3>
-            <p>I created this application to let users practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
+            <p>This application allows users practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
             <p>Technologies: <strong>HTML, CSS, JavaScript, React</strong></p>
             <p>Year: <strong>2022</strong></p>
             <div className='project-icons'>
@@ -47,12 +84,14 @@ const Projects = () => {
               >{otherSkills.GitHub}</a>
             </div>
           </div>
-          <img src={owlArray1} alt='Owl Array screenshot 1' />
-          <img src={owlArray2} alt='Owl Array screenshot 2' />
+          
         </div>
         <aside className='project-description'>
           {/* <h3>Owl Array</h3> */}
-          {dots()}
+          <div className='dots'>
+            {dots(0)}
+          </div>
+          
           {/* <div className='project-icons'>
             <a 
               className='chrome-icon'
@@ -81,7 +120,9 @@ const Projects = () => {
           <img src={speedy2} alt='Owl Array screenshot 2' />
         </div>
         <aside className='project-description'>
-          {dots()}
+          <div className='dots'>
+            {dots(1)}
+          </div>
           {/* <h3>Speedy Auto Centre</h3>
           <div>...</div>
           <div className='project-icons'>
@@ -99,7 +140,9 @@ const Projects = () => {
           <img src={fourInALine2} alt='Owl Array screenshot 2' />
         </div>
         <aside className='project-description'>
-          {dots()}
+          <div className='dots'>
+            {dots(2)}
+          </div>
           {/* <h3>Four in a Line</h3>
           <div>...</div>
           <div className='project-icons'>
