@@ -1,7 +1,5 @@
 import '../styles/Projects.css';
 import { otherSkills } from '../../data/icons';
-import owlArray1 from '../../images/projects/owl-array-1.png';
-import owlArray2 from '../../images/projects/owl-array-2.png';
 import speedy1 from '../../images/projects/speedy-auto-centre-1.png';
 import speedy2 from '../../images/projects/speedy-auto-centre-2.png';
 import fourInALine1 from '../../images/projects/four-in-a-line-1.png';
@@ -9,6 +7,8 @@ import fourInALine2 from '../../images/projects/four-in-a-line-2.png';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { updateIndicator } from '../../redux/indicators';
+
+import projectsInfo from '../../data/projectsInfo';
 
 const Projects = () => {
   const indicatorStatus = useSelector(state => state.indicators);
@@ -47,37 +47,33 @@ const Projects = () => {
     modifyIndicator();
   };
 
-  console.log(indicatorStatus);
-
-  return (
-    <section id='projects'>
-      <article className='projects-headers'>
-        <h2>Projects</h2>
-      </article>
+  const generateProject = (projectNum) => {
+    const projectData = projectsInfo[projectNum];
+    return (
       <article className='projects-windows'>
-        <div 
-        id='owl-array' 
+        <aside 
+        id={projectData.projectID}
         className='screenshoot-container'
         onScroll={displayIndicator}
         >
-          <img src={owlArray1} alt='Owl Array screenshot 1' />
-          <img src={owlArray2} alt='Owl Array screenshot 2' />
+          <img src={projectData.screenShotName1} alt={`${projectData.alt} 1`} />
+          <img src={projectData.screenShotName2} alt={`${projectData.alt} 2`} />
           <div className='info'>
-            <h3>Owl Array</h3>
-            <p>This application allows users practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.</p>
-            <p>Technologies: <strong>HTML, CSS, JavaScript, React</strong></p>
-            <p>Year: <strong>2022</strong></p>
+            <h3>{projectData.projectName}</h3>
+            <p>{projectData.description}</p>
+            <p>Technologies: <strong>{projectData.technologies}</strong></p>
+            <p>Year: <strong>{projectData.year}</strong></p>
             <div className='project-icons'>
               <a 
                 className='project-anchor chrome-icon'
-                href='https://owl-array.netlify.app'
+                href={projectData.webLink}
                 target='_blank'
                 rel='noreferrer'
                 title='Go to Website'
               ><i className='fa-solid fa-square-arrow-up-right'></i></a>
               <a 
                 className='project-anchor github-icon'
-                href='https://github.com/juanej88/owl-array'
+                href={projectData.gitHubLink}
                 target='_blank'
                 rel='noreferrer'
                 title='See Code on GitHub'
@@ -85,34 +81,23 @@ const Projects = () => {
             </div>
           </div>
           
-        </div>
+        </aside>
         <aside className='project-description'>
-          {/* <h3>Owl Array</h3> */}
           <div className='dots'>
-            {dots(0)}
+            {dots(projectNum)}
           </div>
-          
-          {/* <div className='project-icons'>
-            <a 
-              className='chrome-icon'
-              href='https://owl-array.netlify.app'
-              target='_blank'
-              rel='noreferrer'
-              title='Go to Website'
-            ><i className='fa-solid fa-square-arrow-up-right'></i></a>
-            <a 
-              className='github-icon'
-              href='https://github.com/juanej88/owl-array'
-              target='_blank'
-              rel='noreferrer'
-              title='See the Code on GitHub'
-            >{otherSkills.GitHub}</a>
-          </div> */}
-          
-          {/* <p>This application was created to practice built-in array methods in JavaScript</p>
-          <p><strong>HTML, CSS, JavaScript, React</strong></p> */}
         </aside>
       </article>
+    );
+  }
+
+  return (
+    <section id='projects'>
+      <article className='projects-headers'>
+        <h2>Projects</h2>
+      </article>
+      
+      {generateProject(0)}
 
       <article className='projects-windows'>
         <div className='screenshoot-container'>
