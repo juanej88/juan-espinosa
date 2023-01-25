@@ -1,7 +1,6 @@
 import '../styles/Projects.css';
 import { otherSkills } from '../../data/icons';
-import speedy1 from '../../images/projects/speedy-auto-centre-1.png';
-import speedy2 from '../../images/projects/speedy-auto-centre-2.png';
+
 import fourInALine1 from '../../images/projects/four-in-a-line-1.png';
 import fourInALine2 from '../../images/projects/four-in-a-line-2.png';
 
@@ -38,7 +37,8 @@ const Projects = () => {
       1
       );
 
-    const projectIndicator = e.target.id === 'owl-array' ? 0 : 1;
+    const projectIndicator = (e.target.id === 'owl-array' ? 0 :
+      e.target.id === 'speedy' ? 1 : 2);
 
     const modifyIndicator = () => {
       dispatch(updateIndicator([projectIndicator, indicatorPosition]));
@@ -97,27 +97,8 @@ const Projects = () => {
         <h2>Projects</h2>
       </article>
       
-      {generateProject(0)}
-
-      <article className='projects-windows'>
-        <div className='screenshoot-container'>
-          <img src={speedy1} alt='Owl Array screenshot 1' />
-          <img src={speedy2} alt='Owl Array screenshot 2' />
-        </div>
-        <aside className='project-description'>
-          <div className='dots'>
-            {dots(1)}
-          </div>
-          {/* <h3>Speedy Auto Centre</h3>
-          <div>...</div>
-          <div className='project-icons'>
-            <span className='chrome-icon'><i className='fa-solid fa-square-arrow-up-right'></i></span>
-            <span className='github-icon'>{otherSkills.GitHub}</span>
-          </div> */}
-          {/* <p>This website was created for the company Speedy Auto Centre</p>
-          <p><strong>HTML, CSS, JavaScript, PHP</strong></p> */}
-        </aside>
-      </article>
+        {generateProject(0)}
+        {generateProject(1)}
 
       <article className='projects-windows'>
         <div className='screenshoot-container'>
