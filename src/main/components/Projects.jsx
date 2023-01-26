@@ -1,9 +1,6 @@
 import '../styles/Projects.css';
 import { otherSkills } from '../../data/icons';
 
-import fourInALine1 from '../../images/projects/four-in-a-line-1.png';
-import fourInALine2 from '../../images/projects/four-in-a-line-2.png';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { updateIndicator } from '../../redux/indicators';
 
@@ -96,30 +93,9 @@ const Projects = () => {
       <article className='projects-headers'>
         <h2>Projects</h2>
       </article>
-      
-        {generateProject(0)}
-        {generateProject(1)}
-
-      <article className='projects-windows'>
-        <div className='screenshoot-container'>
-          <img src={fourInALine1} alt='Four in a Line screenshot 1' />
-          <img src={fourInALine2} alt='Owl Array screenshot 2' />
-        </div>
-        <aside className='project-description'>
-          <div className='dots'>
-            {dots(2)}
-          </div>
-          {/* <h3>Four in a Line</h3>
-          <div>...</div>
-          <div className='project-icons'>
-            <span className='chrome-icon'><i className='fa-solid fa-square-arrow-up-right'></i></span>
-            <span className='github-icon'>{otherSkills.GitHub}</span>
-          </div> */}
-          {/* <p>This game was created to play four in a line</p>
-          <p><strong>HTML, CSS, JavaScript</strong></p> */}
-        </aside>
-      </article>
-
+      {generateProject(0)}
+      {generateProject(1)}
+      {generateProject(2)}
     </section>
   );
 };

@@ -2,6 +2,8 @@ import owlArray1 from '../images/projects/owl-array-1.png';
 import owlArray2 from '../images/projects/owl-array-2.png';
 import speedy1 from '../images/projects/speedy-auto-centre-1.png';
 import speedy2 from '../images/projects/speedy-auto-centre-2.png';
+import fourInALine1 from '../images/projects/four-in-a-line-1.png';
+import fourInALine2 from '../images/projects/four-in-a-line-2.png';
 
 const projectsInfo = [
   {
@@ -25,8 +27,20 @@ const projectsInfo = [
     description: 'This website was created for the company Speedy Auto Centre.',
     technologies: 'HTML, CSS, JavaScript, PHP',
     year: 2020,
-    webLink: 'https://www.speedyautocentre.com/',
+    webLink: 'https://www.speedyautocentre.com',
     gitHubLink: 'https://github.com/juanej88/SpeedyAutoCentre'
+  },
+  {
+    projectID: 'four-in-a-line',
+    screenShotName1: fourInALine1,
+    screenShotName2: fourInALine2,
+    alt: 'Four in a Line screenshot',
+    projectName: 'Four in a Line',
+    description: 'This game was created to play four in a line.',
+    technologies: 'HTML, CSS, JavaScript, jQuery',
+    year: 2019,
+    webLink: 'https://juanej88.github.io/FourInALine',
+    gitHubLink: 'https://github.com/juanej88/FourInALine'
   }
 ];
 
