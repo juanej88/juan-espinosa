@@ -35,7 +35,8 @@ const Projects = () => {
       );
 
     const projectIndicator = (e.target.id === 'owl-array' ? 0 :
-      e.target.id === 'speedy' ? 1 : 2);
+      e.target.id === 'speedy' ? 1 :
+      e.target.id === 'four-in-a-line' ? 2 : 3);
 
     const modifyIndicator = () => {
       dispatch(updateIndicator([projectIndicator, indicatorPosition]));

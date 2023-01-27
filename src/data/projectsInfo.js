@@ -37,7 +37,7 @@ const projectsInfo = [
     alt: 'Four in a Line screenshot',
     projectName: 'Four in a Line',
     description: 'This game was created to play four in a line.',
-    technologies: 'HTML, CSS, JavaScript, jQuery',
+    technologies: 'HTML, CSS, JavaScript',
     year: 2019,
     webLink: 'https://juanej88.github.io/FourInALine',
     gitHubLink: 'https://github.com/juanej88/FourInALine'

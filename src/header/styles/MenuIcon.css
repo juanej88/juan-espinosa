@@ -1,9 +1,33 @@
-#menu-icon i {
-  font-size: 1.5rem;
+#menu-icon {
+  width: 1.25rem;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 800px) {
   #menu-icon {
     display: none;
   }
+}
+
+.bars {
+  position: relative;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 2px;
+  margin: 6px 0;
+  animation: 0.2s linear forwards appDarkMode;
+}
+
+.App.dark-mode .bars {
+  animation: 0.2s linear forwards appLightMode;
+}
+
+.bar1-closed {
+  top: 4px;
+  rotate: 45deg;
+}
+
+.bar2-closed {
+  bottom: 4px;
+  rotate: -45deg;
 }

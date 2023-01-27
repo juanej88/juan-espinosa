@@ -5,9 +5,9 @@ const MenuIcon = props => {
   return (
     <section 
       id='menu-icon' 
-      // className={props.darkMode ? 'dark-mode' : null}
     >
-      <i className='fa-solid fa-bars'></i>
+      <div className='bars'></div>
+      <div className='bars'></div>
     </section>
   );
 };
