@@ -4,13 +4,15 @@ import headingReducer from './heading';
 import homeAnimationReducer from './homeAnimation';
 import buttonReducer from './showMoreButton';
 import indicatorReducer from './indicators';
+import showMenuReducer from './showMenu';
 
 const rootReducer = combineReducers({
   darkMode: darkModeReducer,
   heading: headingReducer,
   homeAnimation: homeAnimationReducer,
   showMoreButton: buttonReducer,
-  indicators: indicatorReducer
+  indicators: indicatorReducer,
+  showMenu: showMenuReducer
 });
 
 const store = createStore(rootReducer);

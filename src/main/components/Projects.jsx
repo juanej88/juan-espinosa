@@ -16,6 +16,7 @@ const Projects = () => {
       allDots.push (
         <div 
           className={indicatorStatus[project] === i ? 'dot dot-active' : 'dot'}
+          key={`${project}dot${i}`}
         >
         </div>
         );
@@ -48,7 +49,7 @@ const Projects = () => {
   const generateProject = (projectNum) => {
     const projectData = projectsInfo[projectNum];
     return (
-      <article className='projects-windows'>
+      <article className='projects-windows' key={projectNum}>
         <aside 
         id={projectData.projectID}
         className='screenshoot-container'
