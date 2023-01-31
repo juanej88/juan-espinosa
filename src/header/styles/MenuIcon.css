@@ -15,19 +15,89 @@
   height: 2px;
   border-radius: 2px;
   margin: 6px 0;
-  animation: 0.2s linear forwards appDarkMode;
+  background-color: black;
 }
 
 .App.dark-mode .bars {
-  animation: 0.2s linear forwards appLightMode;
+  background-color: white;
+}
+
+.bar1-open {
+  animation: 0.2s linear forwards bar1-open;
+}
+
+@keyframes bar1-open {
+  0% {
+    top: 4px;
+    rotate: 45deg;
+  }
+  50% {
+    top: 4px;
+    rotate: 0deg;
+  }
+  100% {
+    top: 0px;
+    rotate: 0deg;
+  }
 }
 
 .bar1-closed {
   top: 4px;
   rotate: 45deg;
+  animation: 0.2s linear forwards bar1-closed;
+}
+
+@keyframes bar1-closed {
+  0% {
+    top: 0px;
+    rotate: 0deg;
+  }
+  50% {
+    top: 4px;
+    rotate: 0deg;
+  }
+  100% {
+    top: 4px;
+    rotate: 45deg;
+  }
+}
+
+.bar2-open {
+  animation: 0.2s linear forwards bar2-open;
+}
+
+@keyframes bar2-open {
+  0% {
+    bottom: 4px;
+    rotate: -45deg;
+  }
+  50% {
+    bottom: 4px;
+    rotate: 0deg;
+  }
+  100% {
+    bottom: 0px;
+    rotate: 0deg;
+  }
 }
 
 .bar2-closed {
   bottom: 4px;
   rotate: -45deg;
+  animation: 0.2s linear forwards bar2-closed;
+}
+
+@keyframes bar2-closed {
+  0% {
+    bottom: 0px;
+    rotate: 0deg;
+  }
+  50% {
+    bottom: 4px;
+    rotate: 0deg;
+  }
+  100% {
+    bottom: 4px;
+    rotate: -45deg;
+  }
 }

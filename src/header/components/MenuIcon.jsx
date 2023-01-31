@@ -18,10 +18,10 @@ const MenuIcon = props => {
       onClick={toggleMenu}
     >
       <div 
-        className={showMenuStatus ? 'bars' : 'bars bar1-closed'}
+        className={showMenuStatus ? 'bars bar1-closed' : 'bars bar1-open'}
       ></div>
       <div 
-        className={showMenuStatus ? 'bars' : 'bars bar2-closed'}
+        className={showMenuStatus ? 'bars bar2-closed' : 'bars bar2-open'}
       ></div>
     </section>
   );
