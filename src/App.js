@@ -64,7 +64,7 @@ function App() {
       >
         <MenuIcon />
         <Logo darkMode={darkMode} />
-        <Menu darkMode={darkMode} />
+        <Menu />
         <LightDarkIcon
           darkMode={darkMode}
           changeDarkMode={changeDarkMode} 

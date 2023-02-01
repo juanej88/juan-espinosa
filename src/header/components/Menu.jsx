@@ -1,6 +1,9 @@
 import '../styles/Menu.css';
+import { useSelector } from 'react-redux';
 
-const Menu = props => {
+const Menu = () => {
+  const showMenuStatus = useSelector(state => state.showMenu);
+
   const menuElements = () => {
     const menuArray = ['home', 'about', 'skills', 'projects', 'contact'];
     return menuArray.map(element => {
@@ -15,7 +18,7 @@ const Menu = props => {
   return (
     <section 
       id='menu' 
-      className={props.darkMode ? 'dark-mode' : null}
+      className={showMenuStatus ? 'menu-open' : null}
     >
       <ul className='menu-list'>
         {menuElements()}

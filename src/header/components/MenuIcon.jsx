@@ -3,7 +3,7 @@ import '../styles/MenuIcon.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleShowMenu } from '../../redux/showMenu';
 
-const MenuIcon = props => {
+const MenuIcon = () => {
   const showMenuStatus = useSelector(state => state.showMenu);
   const dispatch = useDispatch();
 
