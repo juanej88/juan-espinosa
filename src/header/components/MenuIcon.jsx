@@ -11,7 +11,6 @@ const MenuIcon = () => {
     dispatch(toggleShowMenu());
   };
 
-
   return (
     <section 
       id='menu-icon'

@@ -1,8 +1,14 @@
 import '../styles/Menu.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleShowMenu } from '../../redux/showMenu';
 
 const Menu = () => {
   const showMenuStatus = useSelector(state => state.showMenu);
+  const dispatch = useDispatch();
+  
+  const hideFilter = () => {
+    dispatch(toggleShowMenu());
+  }
 
   const menuElements = () => {
     const menuArray = ['home', 'about', 'skills', 'projects', 'contact'];
@@ -23,6 +29,7 @@ const Menu = () => {
       <ul className='menu-list'>
         {menuElements()}
       </ul>
+      <span id='menu-filter' onClick={hideFilter}></span>
     </section>
   );
 };
