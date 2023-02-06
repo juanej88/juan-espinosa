@@ -8,14 +8,17 @@ const Menu = () => {
   
   const hideFilter = () => {
     dispatch(toggleShowMenu());
-  }
+  };
 
   const menuElements = () => {
     const menuArray = ['home', 'about', 'skills', 'projects', 'contact'];
     return menuArray.map(element => {
       return (
         <li className='menu-element' key={element}>
-          <a href={`#${element}`}>{element}</a>
+          <a 
+            href={`#${element}`}
+            onClick={hideFilter}
+          >{element}</a>
         </li>
       );
     });
@@ -29,7 +32,7 @@ const Menu = () => {
       <ul className='menu-list'>
         {menuElements()}
       </ul>
-      <span id='menu-filter' onClick={hideFilter}></span>
+      <span id='menu-filter' onClick={hideFilter} onTouchStart={hideFilter}></span>
     </section>
   );
 };
