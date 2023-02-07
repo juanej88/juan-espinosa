@@ -68,6 +68,7 @@
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none; 
+  scroll-behavior: smooth;
 }
 
 .screenshoot-container::-webkit-scrollbar {

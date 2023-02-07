@@ -10,6 +10,23 @@ const Projects = () => {
   const indicatorStatus = useSelector(state => state.indicators);
   const dispatch = useDispatch();
 
+  const activateIndicator = e => {
+    const eventID = e.target.id;
+    const projectID = (
+      eventID[0] === '0' ? 'owl-array' :
+      eventID[0] === '1' ? 'speedy' : 
+      'four-in-a-line'
+      );
+    const scrollWidth = document.getElementById(projectID).scrollWidth;
+
+      const position = (
+        eventID[2] === '0' ? 0 :
+        eventID[2] === '1' ? scrollWidth / 2 :
+        scrollWidth
+        );
+    document.getElementById(projectID).scrollLeft = position;
+  };
+
   const dots = (project) => {
     const allDots = []
     for (let i = 0; i < 3; i++) {
@@ -17,6 +34,8 @@ const Projects = () => {
         <div 
           className={indicatorStatus[project] === i ? 'dot dot-active' : 'dot'}
           key={`${project}dot${i}`}
+          id={`${project}_${i}`}
+          onClick={activateIndicator}
         >
         </div>
         );
