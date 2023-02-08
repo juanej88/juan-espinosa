@@ -78,12 +78,17 @@
 #projects .info {
   flex: none;
   background-color: hsl(40, 75%, 97%);
-  border: 1px solid hsl(0, 0%, 75%);
+  /* border: 1px solid hsl(0, 0%, 75%); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: justify;
   padding: 1rem;
+  animation: 0.2s linear forwards appLightMode;
+}
+
+.App.dark-mode #projects .info {
+  animation: 0.2s linear forwards appDarkMode;
 }
 
 @media only screen and (max-width: 500px) {
@@ -99,12 +104,6 @@
   scroll-snap-stop: always;
   margin: 0 0.5rem;
 }
-
-/* .project-description {
-  display: grid;
-  grid-template-columns: 1fr 2rem 1fr;  
-  align-items: center;
-} */
 
 .dots {
   height: 1rem;
@@ -142,7 +141,11 @@
 #projects i {
   padding: 0 0.25rem;
   font-size: 1.65rem;
-  color: black;
+  animation: 0.2s linear forwards footerLightMode;
+}
+
+.App.dark-mode #projects i {
+  animation: 0.2s linear forwards footerDarkMode;
 }
 
 .project-anchor {

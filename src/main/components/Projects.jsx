@@ -98,7 +98,6 @@ const Projects = () => {
               >{otherSkills.GitHub}</a>
             </div>
           </div>
-          
         </aside>
         <aside className='project-description'>
           <div className='dots'>
@@ -107,7 +106,7 @@ const Projects = () => {
         </aside>
       </article>
     );
-  }
+  };
 
   return (
     <section id='projects'>
