@@ -75,6 +75,16 @@
   display: none;
 }
 
+#projects .info,
+#projects .project-link {
+  display: flex;
+  flex: none;
+  width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin: 0 0.5rem;
+}
+
 #projects .info {
   flex: none;
   background-color: hsl(40, 75%, 97%);
@@ -97,12 +107,8 @@
   }
 }
 
-#projects .info,
 #projects img {
   width: 100%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  margin: 0 0.5rem;
 }
 
 .dots {

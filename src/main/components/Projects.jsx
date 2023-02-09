@@ -74,8 +74,24 @@ const Projects = () => {
         className='screenshoot-container'
         onScroll={displayIndicator}
         >
-          <img src={projectData.screenShotName1} alt={`${projectData.alt} 1`} />
-          <img src={projectData.screenShotName2} alt={`${projectData.alt} 2`} />
+          <a 
+            className='project-link'
+            href={projectData.webLink}
+            target='_blank'
+            rel='noreferrer'
+            title='Go to Website'
+          >
+            <img src={projectData.screenShotName1} alt={`${projectData.alt} 1`} />
+          </a>
+          <a 
+            className='project-link'
+            href={projectData.webLink}
+            target='_blank'
+            rel='noreferrer'
+            title='Go to Website'
+          >
+            <img src={projectData.screenShotName2} alt={`${projectData.alt} 2`} />
+          </a>
           <div className='info'>
             <h3>{projectData.projectName}</h3>
             <p>{projectData.description}</p>
