@@ -1,15 +1,11 @@
 import owlArray1 from '../images/projects/owl-array-1.png';
-import owlArray2 from '../images/projects/owl-array-2.png';
 import speedy1 from '../images/projects/speedy-auto-centre-1.png';
-import speedy2 from '../images/projects/speedy-auto-centre-2.png';
 import fourInALine1 from '../images/projects/four-in-a-line-1.png';
-import fourInALine2 from '../images/projects/four-in-a-line-2.png';
 
 const projectsInfo = [
   {
     projectID: 'owl-array',
     screenShotName1: owlArray1,
-    screenShotName2: owlArray2,
     alt: 'Owl Array screenshot',
     projectName: 'Owl Array',
     description: 'This application allows users practice built-in array methods in JavaScript. I got inspired by some games that gave me another approach while interacting with code in a fun way.',
@@ -21,7 +17,6 @@ const projectsInfo = [
   {
     projectID: 'speedy',
     screenShotName1: speedy1,
-    screenShotName2: speedy2,
     alt: 'Speedy Auto Centre screenshot',
     projectName: 'Speedy Auto Centre',
     description: 'This website was created for the company Speedy Auto Centre.',
@@ -33,7 +28,6 @@ const projectsInfo = [
   {
     projectID: 'four-in-a-line',
     screenShotName1: fourInALine1,
-    screenShotName2: fourInALine2,
     alt: 'Four in a Line screenshot',
     projectName: 'Four in a Line',
     description: 'This game was created to play four in a line.',

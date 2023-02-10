@@ -29,7 +29,7 @@ const Projects = () => {
 
   const dots = (project) => {
     const allDots = []
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       allDots.push (
         <div 
           className={indicatorStatus[project] === i ? 'dot dot-active' : 'dot'}
@@ -46,12 +46,10 @@ const Projects = () => {
   const displayIndicator = e => {
     const scrollWidth = e.target.scrollWidth;
     const scrollLeft = e.target.scrollLeft;
-    const scrollSegment = Math.round(scrollWidth / 6);
+    const scrollSegment = Math.round(scrollWidth / 4);
     const indicatorPosition = (
       // 8 px are added due to the left margin of the class 'projects-windows'
-      scrollLeft < (scrollSegment + 8) ? 0 :
-      scrollLeft > (scrollSegment * 3 + 8) ? 2 :
-      1
+      scrollLeft < (scrollSegment + 8) ? 0 : 1
       );
 
     const projectIndicator = (e.target.id === 'owl-array' ? 0 :
@@ -82,15 +80,6 @@ const Projects = () => {
             title='Go to Website'
           >
             <img src={projectData.screenShotName1} alt={`${projectData.alt} 1`} />
-          </a>
-          <a 
-            className='project-link'
-            href={projectData.webLink}
-            target='_blank'
-            rel='noreferrer'
-            title='Go to Website'
-          >
-            <img src={projectData.screenShotName2} alt={`${projectData.alt} 2`} />
           </a>
           <div className='info'>
             <h3>{projectData.projectName}</h3>
