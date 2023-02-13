@@ -108,8 +108,30 @@ i {
 
 .icon-img {
   width: 3.5rem;
-  filter: brightness(0);
   padding: 0.5rem;
+  animation: 0.2s linear forwards iconImgLightMode;
+}
+
+@keyframes iconImgLightMode {
+  from {
+    filter: invert(1) grayscale(1) brightness(2);
+  }
+  to {
+    filter: invert(0) grayscale(0) brightness(0);
+  }
+}
+
+.App.dark-mode .icon-img {
+  animation: 0.2s linear forwards iconImgDarkMode;
+}
+
+@keyframes iconImgDarkMode {
+  from {
+    filter: invert(0) grayscale(0) brightness(0);
+  }
+  to {
+    filter: invert(1) grayscale(1) brightness(2);
+  }
 }
 
 .express {
@@ -119,6 +141,8 @@ i {
 }
 
 .postgre {
+  width: 3.5rem;
+  padding: 0.5rem;
   filter: grayscale(1);
 }
 

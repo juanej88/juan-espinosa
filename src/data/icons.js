@@ -10,7 +10,7 @@ const coreSkills = {
   React: <i className='fa-brands fa-react'></i>,
   'Node.js': <i className='fa-brands fa-node'></i>,
   'Express.js': <i className='express'>Express</i>,
-  PostgreSQL: <img className='icon-img postgre' src={postgresql} alt='postgreSQL icon' />
+  PostgreSQL: <img className='postgre' src={postgresql} alt='postgreSQL icon' />
 }
 
 const otherSkills = {
