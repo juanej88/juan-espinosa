@@ -11,4 +11,27 @@
 #logo {
   height: 1.5rem;
   width: auto;
+  animation: 0.2s linear forwards logoLightMode;
+}
+
+@keyframes logoLightMode {
+  from {
+    filter: invert(1);
+  }
+  to {
+    filter: invert(0);
+  }
+}
+
+.App.dark-mode #logo {
+  animation: 0.2s linear forwards logoDarkMode;
+}
+
+@keyframes logoDarkMode {
+  from {
+    filter: invert(0);
+  }
+  to {
+    filter: invert(1);
+  }
 }
