@@ -1,19 +1,11 @@
 #projects {
-  width: 100%;
-  /* background-color: hsl(0deg, 0%, 10%); */
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-top: 3.5rem;
-}
-
-#projects h2 {
-  font-size: 2rem;
-  padding: 3.5rem 0 2rem;
-  border-top: 1px solid grey;
-  width: 90vw;
+  margin: 3.5rem 3rem 1rem;
+  border-top: 1px solid hsl(0, 0%, 50%);
 }
 
 .projects-windows {
@@ -24,7 +16,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 0;
-  margin-bottom: 3rem;
+  margin: 1rem 0 2rem;
   animation: 0.2s linear forwards projectWindowLightMode;
 }
 

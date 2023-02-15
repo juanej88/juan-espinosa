@@ -3,13 +3,18 @@ import juanLogo from '../../images/logo/juanLogo.png';
 
 const Logo = props => {
   return (
-    <div className='logo-container'>
+    <a 
+      className='logo-container'
+      href='https://juanespinosa.netlify.app/'
+      rel='noreferrer'
+      title='Reload this Website'
+    >
       <img 
         id='logo' 
         src={juanLogo} 
         alt='Juan Espinosa Logo'
       />
-    </div>
+    </a>
   );
 };
 
