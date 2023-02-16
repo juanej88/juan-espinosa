@@ -9,7 +9,6 @@
 .about-container {
   width: stretch;
   max-width: 600px;
-  margin: 0 0.5rem;
   border-radius: 1rem;
   padding: 0.75rem 1.5rem;
   text-align: justify;
@@ -18,7 +17,7 @@
 
 @media only screen and (max-width: 800px) {
   .about-container {
-    padding: 1rem;
+    padding: 1rem 0.25rem;
   }
 }
 
