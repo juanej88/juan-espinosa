@@ -10,9 +10,19 @@
   width: stretch;
   max-width: 600px;
   border-radius: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 0;
   text-align: justify;
   font-weight: 300;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  scroll-behavior: smooth;
+}
+
+.about-container::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -21,8 +31,15 @@
   }
 }
 
-.about-container > :nth-child(3) {
-  padding-top: 1rem;
+.about-parts {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.about-parts:nth-child(1) {
+  margin-right: 2rem;
 }
 
 .about-button {
