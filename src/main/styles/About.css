@@ -10,7 +10,7 @@
   width: stretch;
   max-width: 600px;
   border-radius: 1rem;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0 1.75rem;
   text-align: justify;
   font-weight: 300;
   display: flex;
@@ -40,57 +40,4 @@
 
 .about-parts:nth-child(1) {
   margin-right: 2rem;
-}
-
-.about-button {
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  background-color: transparent;
-  border: 1px solid black;
-  border-radius: 1.5rem;
-  margin-left: 0.75rem;
-  cursor: pointer;
-  animation: 0.2s linear forwards buttonLightMode;
-}
-
-@keyframes buttonLightMode {
-  from {
-    border-color: white;
-    color: white;
-  }
-  to {
-    border-color: black;
-    color: black;
-  }
-}
-
-.about-button:hover {
-  background-color: hsl(210deg, 85%, 65%);
-}
-
-.App.dark-mode .about-button {
-  border-color: white;
-  color: white;
-  border-color: white;
-  color: white;
-  animation: 0.2s linear buttonDarkMode;
-}
-
-@keyframes buttonDarkMode {
-  from {
-    border-color: black;
-    color: black;
-  }
-  to {
-    border-color: white;
-    color: white;
-  }
-}
-
-.App.dark-mode .about-button:hover {
-  background-color: hsl(210deg, 85%, 65%);
-  border-color: hsl(210deg, 85%, 65%);
-  color: black;
 }

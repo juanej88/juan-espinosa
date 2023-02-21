@@ -1,18 +1,33 @@
 import '../styles/About.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleButton } from '../../redux/showMoreButton';
+import { updateAboutIndicator } from '../../redux/aboutIndicator';
 
 const About = () => {
-  const showMore = false;
-
-  const showMoreButton = useSelector(state => state.showMoreButton);
+  const aboutIndicator = useSelector(state => state.aboutIndicator);
   const dispatch = useDispatch();
 
-  const changeShowMore = () => {
-    dispatch(toggleButton());
+  const changeAboutIndicator = e => {
+    let position = e.target.id === 'about_dot_0' ? 0 : 1;
+    dispatch(updateAboutIndicator(position));
   };
 
-  console.log(showMore);
+  console.log(aboutIndicator)
+
+  const dots = () => {
+    const allDots = []
+    for (let i = 0; i < 2; i++) {
+      allDots.push (
+        <div 
+          className={aboutIndicator[0] === i ? 'dot dot-active' : 'dot'}
+          key={`dot${i}`}
+          id={`about_dot_${i}`}
+          onClick={changeAboutIndicator}
+        >
+        </div>
+        );
+    }
+    return allDots;
+  };
   
   return (
     <section id='about'>
@@ -38,12 +53,15 @@ const About = () => {
       </article> 
 
       {/* <button className='about-button'>+</button> */}
-      <button 
+      {/* <button 
         className='about-button skills-button'
         onClick={changeShowMore}
       >
-        {showMoreButton ? '-' : '+'}
-      </button>
+        {showMoreButton ? 'Show less' : 'Show more'}
+      </button> */}
+      <div className='dots'>
+        {dots()}
+      </div>
     </section>
   );
 };

@@ -2,7 +2,7 @@ import { combineReducers, createStore } from 'redux';
 import darkModeReducer from './darkMode';
 import headingReducer from './heading';
 import homeAnimationReducer from './homeAnimation';
-import buttonReducer from './showMoreButton';
+import aboutIndicatorReducer from './aboutIndicator';
 import indicatorReducer from './indicators';
 import showMenuReducer from './showMenu';
 
@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   darkMode: darkModeReducer,
   heading: headingReducer,
   homeAnimation: homeAnimationReducer,
-  showMoreButton: buttonReducer,
+  aboutIndicator: aboutIndicatorReducer,
   indicators: indicatorReducer,
   showMenu: showMenuReducer
 });
