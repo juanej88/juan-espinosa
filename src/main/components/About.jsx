@@ -7,11 +7,28 @@ const About = () => {
   const dispatch = useDispatch();
 
   const changeAboutIndicator = e => {
-    let position = e.target.id === 'about_dot_0' ? 0 : 1;
-    dispatch(updateAboutIndicator(position));
+    const scrollWidth = e.target.scrollWidth;
+    const scrollLeft = e.target.scrollLeft;
+    const scrollSegment = Math.round(scrollWidth / 4);
+
+    const indicatorPosition = (
+      // 8 px are added due to the left margin of the class 'projects-windows'
+      scrollLeft < (scrollSegment + 8) ? 0 : 1
+      );
+
+    dispatch(updateAboutIndicator(indicatorPosition));
   };
 
-  console.log(aboutIndicator)
+  const activateIndicator = e => {
+    const eventID = e.target.id;
+    const scrollWidth = document.getElementById('about-container').scrollWidth;
+    
+    const position = (
+      eventID === 'about_dot_0' ? 0 : scrollWidth
+    );
+
+    document.getElementById('about-container').scrollLeft = position;
+  };
 
   const dots = () => {
     const allDots = []
@@ -21,7 +38,7 @@ const About = () => {
           className={aboutIndicator[0] === i ? 'dot dot-active' : 'dot'}
           key={`dot${i}`}
           id={`about_dot_${i}`}
-          onClick={changeAboutIndicator}
+          onClick={activateIndicator}
         >
         </div>
         );
@@ -32,7 +49,7 @@ const About = () => {
   return (
     <section id='about'>
       <h2>About Me</h2>
-      <article className='about-container'>
+      <article id='about-container' className='about-container' onScroll={changeAboutIndicator}>
         <span className='about-parts'>
           <h3>Who Am I?</h3>
           <p>I'm a Front-End Web Developer with a Bachelor Degree in Architectural Engineering</p>
@@ -51,14 +68,6 @@ const About = () => {
           <p>Thinking about it...</p>
         </span>
       </article> 
-
-      {/* <button className='about-button'>+</button> */}
-      {/* <button 
-        className='about-button skills-button'
-        onClick={changeShowMore}
-      >
-        {showMoreButton ? 'Show less' : 'Show more'}
-      </button> */}
       <div className='dots'>
         {dots()}
       </div>

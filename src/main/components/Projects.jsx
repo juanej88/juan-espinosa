@@ -50,7 +50,7 @@ const Projects = () => {
     const indicatorPosition = (
       // 8 px are added due to the left margin of the class 'projects-windows'
       scrollLeft < (scrollSegment + 8) ? 0 : 1
-      );
+    );
 
     const projectIndicator = (e.target.id === 'owl-array' ? 0 :
       e.target.id === 'speedy' ? 1 :
