@@ -12,7 +12,7 @@ const About = () => {
     const scrollSegment = Math.round(scrollWidth / 4);
 
     const indicatorPosition = (
-      // 8 px are added due to the left margin of the class 'projects-windows'
+      // 8 px are added due to the right margin of the class 'about-parts'
       scrollLeft < (scrollSegment + 8) ? 0 : 1
       );
 

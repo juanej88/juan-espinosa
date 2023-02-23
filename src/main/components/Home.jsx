@@ -45,12 +45,25 @@ const Home = props => {
     return () => clearInterval(timer);
   }, [heading]);
 
+  const getRandomNum = () => {
+    return Math.floor(Math.random() * 80) + 10;
+  }
+
+  const star = (num) => {
+    const stars = [];
+    for (let i = 0; i < num; i++) {
+      stars.push(<div style={{left: `${getRandomNum()}%`, top: `${getRandomNum()}%`}} className='star'></div>);
+    };
+    return stars;
+  };
+
   return (
     <section 
       id='home' 
       className={props.homeAnimation ? null : 'extendHome'}
     >
       <aside className='home-background-colour'></aside>
+      <aside className='stars'>{star(8)}</aside>
       <aside className='home-background-scene'>
         <div className='mountain mountain-one'></div>
         <div className='mountain mountain-two'></div>
