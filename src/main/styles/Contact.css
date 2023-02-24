@@ -19,7 +19,6 @@ h2 {
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
-  margin: 0 1rem;
 }
 
 .contact-container {
@@ -28,7 +27,7 @@ h2 {
   padding-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -53,6 +52,12 @@ h2 {
   align-items: center;
   /* Animation in Skills.css */
   animation: 0.2s linear forwards skillsLightMode;
+}
+
+@media only screen and (max-width: 800px) {
+  .contant-link {
+    margin: 0 0.25rem 1.5rem;
+  }
 }
 
 .App.dark-mode .contant-link {

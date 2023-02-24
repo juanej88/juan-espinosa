@@ -63,7 +63,7 @@ const Home = props => {
       className={props.homeAnimation ? null : 'extendHome'}
     >
       <aside className='home-background-colour'></aside>
-      <aside className='stars'>{star(8)}</aside>
+      <aside className='stars'>{star(9)}</aside>
       <aside className='home-background-scene'>
         <div className='mountain mountain-one'></div>
         <div className='mountain mountain-two'></div>

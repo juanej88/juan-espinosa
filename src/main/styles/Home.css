@@ -100,7 +100,7 @@
 }
 
 .App.dark-mode .star {
-  background-color: white;
+  background-color: hsla(0, 0%, 100%, 50%);
 }
 
 .mountain {
