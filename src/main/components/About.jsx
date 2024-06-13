@@ -58,12 +58,12 @@ const About = () => {
           <p>I started coding as a hobby five years ago and decided to shift into a career in software development this year. This led me to move from NSW to WA to immerse myself in the tech community and work on building and maintaining software applications within a team I am proud to be part of.</p>
         </span>
         <span className='about-parts'>
-          <h3>Challenge I've Encountered</h3>
-          <p>While developing the Speedy Auto Centre Pty Ltd website, the owner wanted a booking system to receive email notifications for service requests. Despite GitHub's limitations, I found a solution by hosting the website on Google Cloud, enabling to send booking confirmations directly.</p>
-          <h3>Latest Project that I Developed</h3>
-          <p>I have come across interactive CSS practice websites, but none dedicated to JavaScript built-in methods. Hence, I developed "Owl Array," a web application enabling users to practice these methods within a playful gaming environment. Featuring essential functions like push, pop, and slice, users can progress through levels with the flexibility to skip ahead or complete them sequentially.</p>
-          <h3>Current Project I'm Working at</h3>
-          <p>I frequently miss celebrating the birthdays of loved ones due to overwhelming Facebook notifications from a large friend list. To remedy this, I'm developing a full-stack app named "Cookies & Dates.” This platform empowers users to selectively store and receive notifications for important dates, ensuring they never miss a special occasion.</p>
+          <h3>My Latest Project</h3>
+          <p>I have come across interactive CSS practice websites, but none dedicated to JavaScript built-in methods. Hence, I developed "Owl Array," a web application enabling users to practice these methods within a playful gaming environment.</p> 
+          <p>Featuring essential functions like push, pop, and slice, users can progress through levels with the flexibility to skip ahead or complete them sequentially.</p>
+          <h3>My Current Project</h3>
+          <p>I frequently miss celebrating the birthdays of loved ones due to overwhelming Facebook notifications from a large friend list. To remedy this, I'm developing a full-stack app named "Cookies & Dates." </p> 
+          <p>This platform empowers users to selectively store and receive notifications for important dates, ensuring they never miss a special occasion.</p>
         </span>
       </article> 
       <div className='dots'>

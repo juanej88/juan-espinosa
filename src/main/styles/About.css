@@ -41,3 +41,7 @@
 .about-parts:nth-child(1) {
   margin-right: 2rem;
 }
+
+.about-parts > p {
+  padding-bottom: 1rem;
+}
