@@ -13,8 +13,9 @@ const Projects = () => {
   const activateIndicator = e => {
     const eventID = e.target.id;
     const projectID = (
-      eventID[0] === '0' ? 'owl-array' :
-      eventID[0] === '1' ? 'speedy' : 
+      eventID[0] === '0' ? 'cookies-dates' :
+      eventID[0] === '1' ? 'owl-array' :
+      eventID[0] === '2' ? 'speedy' : 
       'four-in-a-line'
       );
     const scrollWidth = document.getElementById(projectID).scrollWidth;
@@ -52,9 +53,11 @@ const Projects = () => {
       scrollLeft < (scrollSegment + 8) ? 0 : 1
     );
 
-    const projectIndicator = (e.target.id === 'owl-array' ? 0 :
-      e.target.id === 'speedy' ? 1 :
-      e.target.id === 'four-in-a-line' ? 2 : 3);
+    const projectIndicator = (
+      e.target.id === 'cookies-dates' ? 0 :
+      e.target.id === 'owl-array' ? 1 :
+      e.target.id === 'speedy' ? 2 :
+      e.target.id === 'four-in-a-line' ? 3 : 4);
 
     const modifyIndicator = () => {
       dispatch(updateIndicator([projectIndicator, indicatorPosition]));
@@ -121,6 +124,7 @@ const Projects = () => {
       {generateProject(0)}
       {generateProject(1)}
       {generateProject(2)}
+      {generateProject(3)}
     </section>
   );
 };
