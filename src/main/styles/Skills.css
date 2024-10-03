@@ -31,7 +31,7 @@
 
 #skills p {
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .skills-container {
@@ -106,6 +106,13 @@ i {
   animation: 0.2s linear forwards iconImgLightMode;
 }
 
+.django {
+  width: 6rem;
+  padding: 1rem;
+  filter: grayscale(1);
+  animation: 0.2s linear forwards iconImgLightMode;
+}
+
 @keyframes iconImgLightMode {
   from {
     filter: invert(1) grayscale(1) brightness(2);
@@ -119,6 +126,13 @@ i {
   animation: 0.2s linear forwards iconImgDarkMode;
 }
 
+.App.dark-mode .django {
+  width: 6rem;
+  padding: 1rem;
+  filter: grayscale(1) invert(1);
+  animation: 0.2s linear forwards iconImgDarkMode;
+}
+
 @keyframes iconImgDarkMode {
   from {
     filter: invert(0) grayscale(0) brightness(0);
@@ -128,15 +142,15 @@ i {
   }
 }
 
-.express {
-  font: 1.25rem helvetica neue, open sans, sans-serif;
-  font-weight: 200;
-  padding: 1rem 0;
+.mysql {
+  width: 4.5rem;
+  padding: 0.75rem;
+  filter: grayscale(1);
 }
 
-.postgre {
-  width: 3.5rem;
-  padding: 0.5rem;
+.google-cloud {
+  width: 3.75rem;
+  padding: 0.75rem;
   filter: grayscale(1);
 }
 

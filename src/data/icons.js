@@ -1,23 +1,31 @@
-import jQuery from '../images/icons/jquery.gif';
-import redux from '../images/icons/redux.png';
-import postgresql from '../images/icons/postgresql.png';
+import django from '../images/icons/django.svg';
+import mysql from '../images/icons/mysql-logo.svg';
+import googleCloud from '../images/icons/google-cloud.png';
+
 
 const coreSkills = {
   HTML: <i className='fa-brands fa-html5'></i>,
   CSS: <i className='fa-brands fa-css3-alt'></i>,
   JavaScript: <i className='fa-brands fa-square-js'></i>,
-  PHP: <i className='fa-brands fa-php'></i>,
   React: <i className='fa-brands fa-react'></i>,
-  'Node.js': <i className='fa-brands fa-node'></i>,
-  'Express.js': <i className='express'>Express</i>,
-  PostgreSQL: <img className='postgre' src={postgresql} alt='postgreSQL icon' />
+  Python: <i className='fa-brands fa-python'></i>,
+  Django: <img className='django' src={django} alt='Django icon' />,
+  MySQL: <img className='mysql' src={mysql} alt='MySQL icon' />,
+  'Google Cloud': <img className='google-cloud' src={googleCloud} alt='Google Cloud icon' />,
+  PHP: <i className='fa-brands fa-php'></i>,
 }
 
 const otherSkills = {
-  jQuery: <img className='icon-img' src={jQuery} alt='jQuery icon' />,
-  Redux: <img className='icon-img' src={redux} alt='redux icon' />,
+  Figma: <i className='fa-brands fa-figma'></i>,
   Git: <i className='fa-brands fa-git-alt'></i>,
   GitHub: <i className='fa-brands fa-github'></i>,
 }
 
 export { coreSkills, otherSkills };
+
+
+
+
+
+
+
