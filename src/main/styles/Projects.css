@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  text-align: center;
-  margin: 3.5rem 3rem 1rem;
+  margin: 3.5rem 3rem 0;
+  padding: 0rem 1rem 3.5rem;
   border-top: 1px solid hsl(0, 0%, 50%);
 }
 
@@ -14,21 +14,56 @@
   }
 }
 
-.projects-windows {
+#projects h3 {
+  align-self: flex-start;
+  max-width: 600px;
+  display: block;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.projects-slider {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  display: flex;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  scroll-behavior: smooth;
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: none;
+  width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin: 0 0.75rem;
+}
+
+.project-window {
   max-width: 600px;
   background-color: hsl(30deg, 5%, 92%);
   border: 1px solid hsl(30deg, 0%, 75%);
   border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem 0;
-  margin: 1rem 0 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
   animation: 0.2s linear forwards projectWindowLightMode;
 }
 
 @media only screen and (max-width: 800px) {
-  .projects-windows {
-    padding: 0.75rem 0.75rem 0;
+  .project-window {
+    padding: 0.75rem;
   }
 }
 
@@ -43,7 +78,7 @@
   }
 }
 
-.App.dark-mode .projects-windows {
+.App.dark-mode .project-window {
   animation: 0.2s linear forwards projectWindowDarkMode;
 }
 
@@ -58,50 +93,17 @@
   }
 }
 
-.screenshoot-container {
-  width: 100%;
-  display: flex;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-  -ms-overflow-style: none;
-  scrollbar-width: none; 
-  scroll-behavior: smooth;
-}
-
-.screenshoot-container::-webkit-scrollbar {
-  display: none;
-}
-
-#projects .info,
 #projects .project-link {
   display: flex;
-  flex: none;
-  width: 100%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  margin: 0 0.5rem;
 }
 
 #projects .info {
-  flex: none;
-  background-color: hsl(40, 75%, 97%);
-  /* border: 1px solid hsl(0, 0%, 75%); */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: justify;
-  padding: 1rem;
   animation: 0.2s linear forwards appLightMode;
 }
 
 .App.dark-mode #projects .info {
   animation: 0.2s linear forwards appDarkMode;
-}
-
-@media only screen and (max-width: 500px) {
-  #projects .info {
-    padding: 0.5rem;
-  }
 }
 
 #projects img {
@@ -137,12 +139,9 @@
   background-color: hsl(0deg, 0%, 75%);
 }
 
-.project-icons {
-  text-align: center;
-}
-
 #projects i {
-  padding: 0 0.25rem;
+  padding: 0;
+  margin-right: 0.25rem;
   font-size: 1.65rem;
   animation: 0.2s linear forwards footerLightMode;
 }
@@ -152,25 +151,18 @@
 }
 
 .project-anchor {
-  margin: 0 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-weight: 300;
+  animation: 0.2s linear forwards anchorLightMode;
 }
 
-#projects h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-decoration: underline;
+.App.dark-mode .project-anchor {
+  animation: 0.2s linear forwards anchorDarkMode;
 }
 
 #projects p {
   font-weight: 300;
-}
-
-@media only screen and (max-width: 500px) {
-  #projects h3 {
-    font-size: 1.05rem;
-  }
-
-  #projects p {
-    font-size: 0.9rem;
-  }
+  margin-bottom: 0.75rem;
 }

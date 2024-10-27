@@ -3,7 +3,7 @@ import darkModeReducer from './darkMode';
 import headingReducer from './heading';
 import homeAnimationReducer from './homeAnimation';
 import aboutIndicatorReducer from './aboutIndicator';
-import indicatorReducer from './indicators';
+import projectsIndicatorReducer from './projectsIndicator';
 import showMenuReducer from './showMenu';
 
 const rootReducer = combineReducers({
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   heading: headingReducer,
   homeAnimation: homeAnimationReducer,
   aboutIndicator: aboutIndicatorReducer,
-  indicators: indicatorReducer,
+  projectsIndicator: projectsIndicatorReducer,
   showMenu: showMenuReducer
 });
 

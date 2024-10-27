@@ -2,129 +2,102 @@ import '../styles/Projects.css';
 import { otherSkills } from '../../data/icons';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { updateIndicator } from '../../redux/indicators';
+import { updateProjectsIndicator } from '../../redux/projectsIndicator';
 
 import projectsInfo from '../../data/projectsInfo';
 
 const Projects = () => {
-  const indicatorStatus = useSelector(state => state.indicators);
+  const projectsIndicator = useSelector(state => state.projectsIndicator);
   const dispatch = useDispatch();
 
   const activateIndicator = e => {
+    // The position takes the dot selected with the eventID[0] multiplied by the scrollWitdth multiplied by the segementsPercentage plus 12 which is the margin in pixels of each project container
     const eventID = e.target.id;
-    const projectID = (
-      eventID[0] === '0' ? 'cookies-dates' :
-      eventID[0] === '1' ? 'owl-array' :
-      eventID[0] === '2' ? 'speedy' : 
-      'four-in-a-line'
-      );
-    const scrollWidth = document.getElementById(projectID).scrollWidth;
-
-      const position = (
-        eventID[2] === '0' ? 0 :
-        eventID[2] === '1' ? scrollWidth / 2 :
-        scrollWidth
-        );
-    document.getElementById(projectID).scrollLeft = position;
+    const scrollWidth = document.getElementById('projects-slider').scrollWidth;
+    const segmentsPercentage = 1 / projectsInfo.length;
+    const position = Number(eventID[0]) * scrollWidth * segmentsPercentage + 12;
+    document.getElementById('projects-slider').scrollLeft = position;
   };
 
-  const dots = (project) => {
-    const allDots = []
-    for (let i = 0; i < 2; i++) {
-      allDots.push (
-        <div 
-          className={indicatorStatus[project] === i ? 'dot dot-active' : 'dot'}
-          key={`${project}dot${i}`}
-          id={`${project}_${i}`}
+  const dots = () => {
+    return projectsInfo.map((project, idx) => {
+      return (
+        <aside
+          className={projectsIndicator[0] === idx ? 'dot dot-active' : 'dot'}
+          key={`${idx}dot${idx}`}
+          id={`${idx}_${project.projectID}`}
           onClick={activateIndicator}
         >
-        </div>
-        );
-    }
-    return allDots;
+        </aside>
+      );
+    });
   };
 
   const displayIndicator = e => {
     const scrollWidth = e.target.scrollWidth;
     const scrollLeft = e.target.scrollLeft;
-    const scrollSegment = Math.round(scrollWidth / 4);
+    const scrollSegment = Math.round(scrollWidth / (projectsInfo.length * 2));
     const indicatorPosition = (
-      // 8 px are added due to the left margin of the class 'projects-windows'
-      scrollLeft < (scrollSegment + 8) ? 0 : 1
+      // 12 px are added due to the left margin of the class 'project-container'
+      scrollLeft < (scrollSegment + 12) ? 0 :
+      scrollLeft < (scrollSegment * 3 + 12) ? 1 : 
+      scrollLeft < (scrollSegment * 5 + 12) ? 2 : 3
     );
-
-    const projectIndicator = (
-      e.target.id === 'cookies-dates' ? 0 :
-      e.target.id === 'owl-array' ? 1 :
-      e.target.id === 'speedy' ? 2 :
-      e.target.id === 'four-in-a-line' ? 3 : 4);
-
-    const modifyIndicator = () => {
-      dispatch(updateIndicator([projectIndicator, indicatorPosition]));
-    };
-
-    modifyIndicator();
+    dispatch(updateProjectsIndicator(indicatorPosition));
   };
 
-  const generateProject = (projectNum) => {
-    const projectData = projectsInfo[projectNum];
-    return (
-      <article className='projects-windows' key={projectNum}>
-        <aside 
-        id={projectData.projectID}
-        className='screenshoot-container'
-        onScroll={displayIndicator}
-        >
-          <a 
-            className='project-link'
-            href={projectData.webLink}
-            target='_blank'
-            rel='noreferrer'
-            title='Go to Website'
-          >
-            <img src={projectData.screenShotName1} alt={`${projectData.alt} 1`} />
-          </a>
-          <div className='info'>
-            <h3>{projectData.projectName}</h3>
-            <p>{projectData.description}</p>
-            <p>Technologies: <strong>{projectData.technologies}</strong></p>
-            <p>Year: <strong>{projectData.year}</strong></p>
-            <div className='project-icons'>
+  const getProjects = () => {
+    return projectsInfo.map(project => {
+      return (
+        <aside className='project-container' key={`${project.projectName}_key`}>
+          <h3>{project.projectName}</h3>
+          <figure className='project-window'>
               <a 
-                className='project-anchor chrome-icon'
-                href={projectData.webLink}
+                className='project-link'
+                href={project.webLink}
                 target='_blank'
                 rel='noreferrer'
                 title='Go to Website'
-              ><i className='fa-solid fa-square-arrow-up-right'></i></a>
+                >
+                <img src={project.screenShotName1} alt={`${project.alt} 1`} />
+              </a>
+          </figure>
+          <figcaption className='info'>
+            <p>{project.description}</p>
+            <p><strong>Technologies:</strong> {project.technologies}</p>
+            <div className='project-icons'>
+              <a 
+                className='project-anchor chrome-icon'
+                href={project.webLink}
+                target='_blank'
+                rel='noreferrer'
+                title='Go to Website'
+                ><i className='fa-solid fa-square-arrow-up-right'></i>Website
+              </a>
               <a 
                 className='project-anchor github-icon'
-                href={projectData.gitHubLink}
+                href={project.gitHubLink}
                 target='_blank'
                 rel='noreferrer'
                 title='See Code on GitHub'
-              >{otherSkills.GitHub}</a>
+                >{otherSkills.GitHub}GitHub
+              </a>
             </div>
-          </div>
+          </figcaption>
         </aside>
-        <aside className='project-description'>
-          <div className='dots'>
-            {dots(projectNum)}
-          </div>
-        </aside>
-      </article>
-    );
+      );
+    });
   };
 
   return (
     <section id='projects'>
-      <article className='projects-headers'>
-        <h2>Projects</h2>
+      <h2>Projects</h2>
+      <article id='projects-slider' className='projects-slider' onScroll={displayIndicator}>
+        {getProjects()}
       </article>
-      {generateProject(0)}
-      {generateProject(1)}
-      {generateProject(2)}
-      {generateProject(3)}
+      <article className='dots'>
+        {dots()}
+      </article>
     </section>
   );
 };

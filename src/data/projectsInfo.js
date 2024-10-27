@@ -1,18 +1,18 @@
 import owlArray1 from '../images/projects/owl-array-1.png';
-import comingSoon from '../images/projects/coming-soon.png';
+import cookiesDates from '../images/projects/cookies-dates.png';
 import speedy1 from '../images/projects/speedy-auto-centre-1.png';
 import fourInALine1 from '../images/projects/four-in-a-line-1.png';
 
 const projectsInfo = [
   {
     projectID: 'cookies-dates',
-    screenShotName1: comingSoon,
-    alt: 'Coming soon image',
+    screenShotName1: cookiesDates,
+    alt: 'Cookies & Dates screenshot',
     projectName: 'Cookies & Dates',
     description: "Web app for storing and receiving notifications for dates like birthdays and anniversaries, with personalised messages generated using ChatGPT's API.",
     technologies: 'HTML, CSS, JavaScript, React, Python, Django, MySQL',
     year: 2024,
-    webLink: 'https://cookiesdates.netlify.app/',
+    webLink: 'https://cookiesanddates.com',
     gitHubLink: 'https://github.com/juanej88/cookies-dates'
   },
   {
