@@ -1,8 +1,7 @@
 #projects {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-items: center;
-  align-items: center;
+  /* align-items: center; */
   margin: 3.5rem 3rem 0;
   padding: 0rem 1rem 3.5rem;
   border-top: 1px solid hsl(0, 0%, 50%);
@@ -14,17 +13,9 @@
   }
 }
 
-#projects h3 {
-  align-self: flex-start;
-  max-width: 600px;
-  display: block;
-  text-align: left;
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
 .projects-slider {
+  grid-area: 2 / 1 / 2 / 2;
+  z-index: 1;
   width: 100%;
   max-width: 600px;
   margin-bottom: 1rem;
@@ -49,6 +40,42 @@
   scroll-snap-align: center;
   scroll-snap-stop: always;
   margin: 0 0.75rem;
+}
+
+.project-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#projects h3 {
+  align-self: flex-start;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.project-anchor {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 300;
+  animation: 0.2s linear forwards anchorLightMode;
+}
+
+.App.dark-mode .project-anchor {
+  animation: 0.2s linear forwards anchorDarkMode;
+}
+
+.link-icon i {
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.github-icon i {
+  font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
 .project-window {
@@ -98,6 +125,10 @@
 }
 
 #projects .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: justify;
   animation: 0.2s linear forwards appLightMode;
 }
@@ -111,7 +142,8 @@
 }
 
 .dots {
-  height: 1rem;
+  grid-area: 3 / 1 / 4 / 2;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,30 +171,48 @@
   background-color: hsl(0deg, 0%, 75%);
 }
 
-#projects i {
-  padding: 0;
-  margin-right: 0.25rem;
-  font-size: 1.65rem;
-  animation: 0.2s linear forwards footerLightMode;
-}
-
-.App.dark-mode #projects i {
-  animation: 0.2s linear forwards footerDarkMode;
-}
-
-.project-anchor {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 1rem;
-  font-weight: 300;
-  animation: 0.2s linear forwards anchorLightMode;
-}
-
-.App.dark-mode .project-anchor {
-  animation: 0.2s linear forwards anchorDarkMode;
-}
-
 #projects p {
   font-weight: 300;
   margin-bottom: 0.75rem;
+}
+
+.navigation-arrows {
+  grid-area: 2 / 1 / 2 / 2;
+  min-width: 750px;
+  height: 3rem;
+  position: relative;
+  top: calc(2rem + 11.5rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-arrows > i {
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navigation-arrows > i:hover {
+  background-color: hsl(30, 5%, 92%);
+}
+
+.App.dark-mode .navigation-arrows > i:hover {
+  background-color: hsl(30, 5%, 0%);
+}
+
+@media only screen and (max-width: 900px) {
+  .navigation-arrows {
+    grid-area: 3 / 1 / 4 / 2;
+    /* min-width: 15rem; */
+    min-width: 100%;
+    max-width: 600px;
+    position: inherit;
+    display: flex;
+    justify-content: space-between;
+  }
 }

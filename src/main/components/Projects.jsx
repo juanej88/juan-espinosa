@@ -50,39 +50,41 @@ const Projects = () => {
     return projectsInfo.map(project => {
       return (
         <aside className='project-container' key={`${project.projectName}_key`}>
-          <h3>{project.projectName}</h3>
+          <div className='project-header'>
+            <a 
+              className='project-anchor link-icon'
+              href={project.webLink}
+              target='_blank'
+              rel='noreferrer'
+              title='Go to Website'
+              >
+                <h3>{project.projectName}</h3>
+                <i class='fa-solid fa-arrow-up-right-from-square'></i>
+            </a>
+            <a 
+              className='project-anchor github-icon'
+              href={project.gitHubLink}
+              target='_blank'
+              rel='noreferrer'
+              title='See Code on GitHub'
+              >{otherSkills.GitHub}
+            </a>
+          </div>
           <figure className='project-window'>
-              <a 
-                className='project-link'
-                href={project.webLink}
-                target='_blank'
-                rel='noreferrer'
-                title='Go to Website'
-                >
-                <img src={project.screenShotName1} alt={`${project.alt} 1`} />
-              </a>
+            <a 
+              className='project-link'
+              href={project.webLink}
+              target='_blank'
+              rel='noreferrer'
+              title='Go to Website'
+              >
+              <img src={project.screenShotName1} alt={`${project.alt} 1`} />
+            </a>
           </figure>
           <figcaption className='info'>
             <p>{project.description}</p>
             <p><strong>Technologies:</strong> {project.technologies}</p>
-            <div className='project-icons'>
-              <a 
-                className='project-anchor chrome-icon'
-                href={project.webLink}
-                target='_blank'
-                rel='noreferrer'
-                title='Go to Website'
-                ><i className='fa-solid fa-square-arrow-up-right'></i>Website
-              </a>
-              <a 
-                className='project-anchor github-icon'
-                href={project.gitHubLink}
-                target='_blank'
-                rel='noreferrer'
-                title='See Code on GitHub'
-                >{otherSkills.GitHub}GitHub
-              </a>
-            </div>
+            
           </figcaption>
         </aside>
       );
@@ -98,6 +100,10 @@ const Projects = () => {
       <article className='dots'>
         {dots()}
       </article>
+      <div className='navigation-arrows'>
+        <i className='fa-solid fa-chevron-left'></i>
+        <i className='fa-solid fa-chevron-right'></i>
+      </div>
     </section>
   );
 };
