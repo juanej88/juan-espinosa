@@ -52,7 +52,7 @@ const Home = props => {
   const star = (num) => {
     const stars = [];
     for (let i = 0; i < num; i++) {
-      stars.push(<div style={{left: `${getRandomNum()}%`, top: `${getRandomNum()}%`}} className='star'></div>);
+      stars.push(<div key={`star_${i}`} style={{left: `${getRandomNum()}%`, top: `${getRandomNum()}%`}} className='star'></div>);
     };
     return stars;
   };

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateProjectsIndicator } from '../../redux/projectsIndicator';
 
 import projectsInfo from '../../data/projectsInfo';
+import { useEffect, useState } from 'react';
 
 const Projects = () => {
   const projectsIndicator = useSelector(state => state.projectsIndicator);
@@ -59,7 +60,7 @@ const Projects = () => {
               title='Go to Website'
               >
                 <h3>{project.projectName}</h3>
-                <i class='fa-solid fa-arrow-up-right-from-square'></i>
+                <i className='fa-solid fa-arrow-up-right-from-square'></i>
             </a>
             <a 
               className='project-anchor github-icon'
@@ -91,6 +92,23 @@ const Projects = () => {
     });
   };
 
+  const [projectDisplay, setProjectDisplay] = useState(0);
+  const slideProject = event => {
+    const direction = event.target.closest('#prev-project') ? 'prev' : 'next';
+    if(direction === 'prev' && projectDisplay <= 0) return;
+    if(direction === 'next' && projectDisplay >= projectsInfo.length - 1) return;
+    setProjectDisplay(prevState => {
+      return direction === 'prev' ? prevState - 1 : prevState + 1;
+    });
+  };
+  useEffect(() => {
+    const projectSliderEl = document.getElementById('projects-slider');
+    const scrollWidth = projectSliderEl.scrollWidth;
+    const segmentsPercentage = 1 / projectsInfo.length;
+    const position = projectDisplay * scrollWidth * segmentsPercentage + 12;
+    projectSliderEl.scrollLeft = position;
+  }, [projectDisplay]);
+
   return (
     <section id='projects'>
       <h2>Projects</h2>
@@ -101,8 +119,12 @@ const Projects = () => {
         {dots()}
       </article>
       <div className='navigation-arrows'>
-        <i className='fa-solid fa-chevron-left'></i>
-        <i className='fa-solid fa-chevron-right'></i>
+        <button id='prev-project' onClick={slideProject} disabled={projectDisplay <= 0}>
+          <i className='fa-solid fa-chevron-left'></i>
+        </button>
+        <button id='next-project' onClick={slideProject} disabled={projectDisplay >= projectsInfo.length - 1}>
+          <i className='fa-solid fa-chevron-right'></i>
+        </button>
       </div>
     </section>
   );
