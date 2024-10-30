@@ -12,11 +12,11 @@ const Projects = () => {
   const dispatch = useDispatch();
 
   const slideProjects = event => {
-    // The position takes the dot selected with the eventID[0] multiplied by the scrollWitdth multiplied by the segementsPercentage plus 12 which is the margin in pixels of each project container
+    // The position takes the projectNum multiplied by the scrollWitdth multiplied by the segementsPercentage plus 12 which is the margin in pixels of each project container
     const projectNum = (
       event.target.closest('#prev-project') ? projectsIndicator[0] - 1 :
       event.target.closest('#next-project') ? projectsIndicator[0] + 1 :
-      Number(event.target.id[0])
+      Number(event.target.id[0]) // when dots are clicked
     );
     const scrollWidth = document.getElementById('projects-slider').scrollWidth;
     const segmentsPercentage = 1 / projectsInfo.length;
@@ -105,7 +105,7 @@ const Projects = () => {
       <article className='dots'>
         {dots()}
       </article>
-      <NavigationArrows handleClick={slideProjects} />
+      <NavigationArrows handleClick={slideProjects} indicator={projectsIndicator[0]} sliderLength={projectsInfo.length - 1} />
     </section>
   );
 };

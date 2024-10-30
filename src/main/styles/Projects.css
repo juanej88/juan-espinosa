@@ -1,7 +1,6 @@
 #projects {
   display: grid;
   justify-items: center;
-  /* align-items: center; */
   margin: 3.5rem 3rem 0;
   padding: 0rem 1rem 3.5rem;
   border-top: 1px solid hsl(0, 0%, 50%);
@@ -14,7 +13,7 @@
 }
 
 .projects-slider {
-  grid-area: 2 / 1 / 2 / 2;
+  grid-area: 2 / 1;
   z-index: 1;
   width: 100%;
   max-width: 600px;
@@ -142,7 +141,7 @@
 }
 
 .dots {
-  grid-area: 3 / 1 / 4 / 2;
+  grid-area: 3 / 1;
   height: 3rem;
   display: flex;
   justify-content: center;
