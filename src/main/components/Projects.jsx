@@ -5,18 +5,21 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateProjectsIndicator } from '../../redux/projectsIndicator';
 
 import projectsInfo from '../../data/projectsInfo';
-import { useEffect, useState } from 'react';
 
 const Projects = () => {
   const projectsIndicator = useSelector(state => state.projectsIndicator);
   const dispatch = useDispatch();
 
-  const activateIndicator = e => {
+  const slideProjects = event => {
     // The position takes the dot selected with the eventID[0] multiplied by the scrollWitdth multiplied by the segementsPercentage plus 12 which is the margin in pixels of each project container
-    const eventID = e.target.id;
+    const projectNum = (
+      event.target.closest('#prev-project') ? projectsIndicator[0] - 1 :
+      event.target.closest('#next-project') ? projectsIndicator[0] + 1 :
+      Number(event.target.id[0])
+    );
     const scrollWidth = document.getElementById('projects-slider').scrollWidth;
     const segmentsPercentage = 1 / projectsInfo.length;
-    const position = Number(eventID[0]) * scrollWidth * segmentsPercentage + 12;
+    const position = projectNum * scrollWidth * segmentsPercentage + 12;
     document.getElementById('projects-slider').scrollLeft = position;
   };
 
@@ -27,16 +30,16 @@ const Projects = () => {
           className={projectsIndicator[0] === idx ? 'dot dot-active' : 'dot'}
           key={`${idx}dot${idx}`}
           id={`${idx}_${project.projectID}`}
-          onClick={activateIndicator}
+          onClick={slideProjects}
         >
         </aside>
       );
     });
   };
 
-  const displayIndicator = e => {
-    const scrollWidth = e.target.scrollWidth;
-    const scrollLeft = e.target.scrollLeft;
+  const displayIndicator = event => {
+    const scrollWidth = event.target.scrollWidth;
+    const scrollLeft = event.target.scrollLeft;
     const scrollSegment = Math.round(scrollWidth / (projectsInfo.length * 2));
     const indicatorPosition = (
       // 12 px are added due to the left margin of the class 'project-container'
@@ -92,23 +95,6 @@ const Projects = () => {
     });
   };
 
-  const [projectDisplay, setProjectDisplay] = useState(0);
-  const slideProject = event => {
-    const direction = event.target.closest('#prev-project') ? 'prev' : 'next';
-    if(direction === 'prev' && projectDisplay <= 0) return;
-    if(direction === 'next' && projectDisplay >= projectsInfo.length - 1) return;
-    setProjectDisplay(prevState => {
-      return direction === 'prev' ? prevState - 1 : prevState + 1;
-    });
-  };
-  useEffect(() => {
-    const projectSliderEl = document.getElementById('projects-slider');
-    const scrollWidth = projectSliderEl.scrollWidth;
-    const segmentsPercentage = 1 / projectsInfo.length;
-    const position = projectDisplay * scrollWidth * segmentsPercentage + 12;
-    projectSliderEl.scrollLeft = position;
-  }, [projectDisplay]);
-
   return (
     <section id='projects'>
       <h2>Projects</h2>
@@ -119,10 +105,10 @@ const Projects = () => {
         {dots()}
       </article>
       <div className='navigation-arrows'>
-        <button id='prev-project' onClick={slideProject} disabled={projectDisplay <= 0}>
+        <button id='prev-project' onClick={slideProjects} disabled={projectsIndicator[0] <= 0}>
           <i className='fa-solid fa-chevron-left'></i>
         </button>
-        <button id='next-project' onClick={slideProject} disabled={projectDisplay >= projectsInfo.length - 1}>
+        <button id='next-project' onClick={slideProjects} disabled={projectsIndicator[0] >= projectsInfo.length - 1}>
           <i className='fa-solid fa-chevron-right'></i>
         </button>
       </div>
