@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateProjectsIndicator } from '../../redux/projectsIndicator';
 
 import projectsInfo from '../../data/projectsInfo';
+import NavigationArrows from './NavigationArrows';
 
 const Projects = () => {
   const projectsIndicator = useSelector(state => state.projectsIndicator);
@@ -104,14 +105,7 @@ const Projects = () => {
       <article className='dots'>
         {dots()}
       </article>
-      <div className='navigation-arrows'>
-        <button id='prev-project' onClick={slideProjects} disabled={projectsIndicator[0] <= 0}>
-          <i className='fa-solid fa-chevron-left'></i>
-        </button>
-        <button id='next-project' onClick={slideProjects} disabled={projectsIndicator[0] >= projectsInfo.length - 1}>
-          <i className='fa-solid fa-chevron-right'></i>
-        </button>
-      </div>
+      <NavigationArrows handleClick={slideProjects} />
     </section>
   );
 };
