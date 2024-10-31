@@ -9,12 +9,12 @@ const Home = props => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let milliseconds = 60
+    let milliseconds = 50
     if(heading.length >= 24) {
       dispatch(showHomeAnimation());
       return;
     } else if(heading.length === 0) {
-      milliseconds = 2000;
+      milliseconds = 1000;
     } else if(heading.length === 5) {
       milliseconds = 500;
     };
