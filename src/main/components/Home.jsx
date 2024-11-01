@@ -60,23 +60,18 @@ const Home = props => {
   return (
     <section 
       id='home' 
-      className={props.homeAnimation ? null : 'extendHome'}
+      className={props.homeAnimation ? null : 'reduceHome'}
     >
-      <aside className='home-background-colour'></aside>
-      <aside className='stars'>{star(9)}</aside>
-      <aside className='home-background-scene'>
-        <div className='mountain mountain-one'></div>
-        <div className='mountain mountain-two'></div>
-        <div className='mountain mountain-three'></div>
-        <div className='mountain mountain-four'></div>
-      </aside>
+      <aside className='stars'>{star(12)}</aside>
+      <aside className='home-background-filter'></aside>
       <article className='home-header'>
         <h1 translate='no'>
-          {heading}
+          <span>{heading}</span>
           <span id='textCursor'>
             |
           </span>
         </h1>
+        <p>Full-Stack Developer</p>
       </article>
     </section>
   );

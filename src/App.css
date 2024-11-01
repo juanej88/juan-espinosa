@@ -57,7 +57,7 @@ header.hidden {
 }
 
 header.visible {
-  animation: 0.5s linear showHeader forwards;
+  animation: 0.5s ease-in 0.5s showHeader forwards;
 }
 
 @keyframes showHeader {
