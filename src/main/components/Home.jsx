@@ -60,7 +60,7 @@ const Home = props => {
   return (
     <section 
       id='home' 
-      className={props.homeAnimation ? null : 'reduceHome'}
+      className={props.homeAnimation ? null : 'show-complete-home'}
     >
       <aside className='stars'>{star(12)}</aside>
       <aside className='home-background-filter'></aside>

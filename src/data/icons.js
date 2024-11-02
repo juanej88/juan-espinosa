@@ -22,10 +22,3 @@ const otherSkills = {
 }
 
 export { coreSkills, otherSkills };
-
-
-
-
-
-
-

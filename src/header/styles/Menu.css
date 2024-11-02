@@ -99,6 +99,7 @@
   font-size: 1.1rem;
   font-weight: 300;
   text-transform: capitalize;
+  color: black;
   padding: 0.25rem 0.75rem;
   animation: 0.2s linear forwards anchorLightMode;
 }
@@ -119,6 +120,7 @@
 }
 
 .App.dark-mode .menu-element > a {
+  color: white;
   animation: 0.2s linear forwards anchorDarkMode;
 }
 

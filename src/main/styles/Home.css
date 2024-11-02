@@ -11,18 +11,18 @@
   background-position-x: 50%;
 }
 
-#home.reduceHome {
-  animation: 0.5s ease-in 0.5s forwards reduceHome;
+/* #home.show-complete-home {
+  animation: 0.5s ease-in 0.5s forwards show-complete-home;
 }
 
-@keyframes reduceHome {
+@keyframes show-complete-home {
   to {
     height: 85vh;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  #home.reduceHome {
+  #home.show-complete-home {
     animation: 0.5s ease-in 0.5s forwards reduceMobileHome;
   }
   
@@ -31,7 +31,7 @@
       height: 75vh;
     }
   }
-}
+} */
 
 .stars {
   position: absolute;
@@ -119,7 +119,6 @@
 }
 
 #home p {
-  position: relative;
   font-size: 1.4rem;
   margin: 1rem;
   padding: 0 0.5rem;
@@ -136,15 +135,11 @@
   }
 }
 
-#home.reduceHome p {
-  animation: 0.5s ease-in 0.5s forwards showHeaderP;
+#home.show-complete-home p {
+  animation: 0.5s ease-in 0.5s forwards showHomeParagraph;
 }
 
-@keyframes showHeaderP {
-  from {
-    top: -3.25rem;
-    opacity: 100%;
-  }
+@keyframes showHomeParagraph {
   to {
     top: 0;
     opacity: 100%;
