@@ -110,6 +110,7 @@
 }
 
 .App.dark-mode #home h1 {
+  color: hsl(210, 85%, 85%);
   background: hsla(0, 0%, 0%, 40%);
   box-shadow: 0 4px 10px hsla(0, 0%, 0%, 50%);
 }
@@ -119,6 +120,7 @@
 }
 
 #home p {
+  color: hsl(0, 0%, 0%);
   font-size: 1.4rem;
   margin: 1rem;
   padding: 0 0.5rem;
@@ -147,6 +149,7 @@
 }
 
 .App.dark-mode #home p {
+  color: hsl(0, 0%, 100%);
   background: hsla(0, 0%, 0%, 40%);
   box-shadow: 0 4px 10px hsla(0, 0%, 0%, 50%);
 }

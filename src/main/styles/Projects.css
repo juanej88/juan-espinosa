@@ -53,7 +53,11 @@
   width: 100%;
   font-size: 1.25rem;
   font-weight: 600;
-  text-decoration: underline;
+  border-bottom: 2px solid hsl(210, 40%, 50%);
+}
+
+.App.dark-mode #projects h3 {
+  border-color: hsl(210, 85%, 85%);
 }
 
 .project-anchor {

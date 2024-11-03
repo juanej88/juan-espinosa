@@ -43,6 +43,16 @@
   margin-right: 2rem;
 }
 
+#about h3 {
+  width: fit-content;
+  border-bottom: 2px solid hsl(210, 40%, 50%);
+  margin-bottom: 0.5rem;
+}
+
+.App.dark-mode #about h3 {
+  border-color: hsl(210, 85%, 85%);
+}
+
 .about-parts > p {
   padding-bottom: 1rem;
 }
