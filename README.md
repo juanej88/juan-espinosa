@@ -33,3 +33,16 @@ An interactive educational tool for learning JavaScript array methods.
 - **Backend**: Django, .NET.
 - **DevOps**: Docker, GitHub Actions.
 - **Other Tools**: Git, GitHub, PostgreSQL, MySQL.
+
+## Education 🎓
+
+- **Bachelor of Architectural Engineering** - 2012, Mexico.
+- **Advanced Diploma of Business and Marketing** - 2020, Australia.
+- **Graduate Diploma of Management** - 2021, Australia.
+
+## Certifications 📜
+
+- **Meta Back-End Developer Professional Certificate** (2024)
+  Gained expertise in Python, Django, SQL, APIs, and cloud hosting.
+- **Meta Front-End Developer Professional Certificate** (2024)
+  Developed skills in HTML, CSS, JavaScript, and React.
