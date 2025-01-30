@@ -46,3 +46,19 @@ An interactive educational tool for learning JavaScript array methods.
   Gained expertise in Python, Django, SQL, APIs, and cloud hosting.
 - **Meta Front-End Developer Professional Certificate** (2024)
   Developed skills in HTML, CSS, JavaScript, and React.
+
+## Deployment 🌐
+
+This portfolio is live and accessible at: [juanespinosa.net](https://juanespinosa.net).
+Feel free to explore my projects and connect with me!
+
+## Contact 📬
+
+I'm always open to connecting with fellow developers and exploring opportunities.
+- **Email**: [dev.juanespinosa@gmail.com](mailto:dev.juanespinosa@gmail.com)
+- **GitHub**: [github.com/juanej88](https://github.com/juanej88)
+- **LinkedIn**: [linkedin.com/in/juanespinosajorrin](https://linkedin.com/in/juanespinosajorrin)
+
+---
+
+Thank you for visiting my portfolio! I look forward to connecting with you and sharing my passion for software development.
